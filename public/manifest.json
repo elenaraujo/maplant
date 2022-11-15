@@ -14,7 +14,7 @@
     }
   ],
   "background_color": "#06092B",
-  "description": "Boilerplate utilizando Typescript, React, NextJS e Styled Components!",
+  "description": "Project for my final paper of graduation in Information Systems",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#06092B"
