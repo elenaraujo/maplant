@@ -1,2 +1,3 @@
 !.storybook
 !.jest
+src/graphql/generated/*

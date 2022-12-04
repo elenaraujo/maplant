@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map:  should render with the marker in correct place 1`] = `
+<div>
+  <h1>
+    Maplant
+  </h1>
+  <div
+    class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+    style="height: 100%; width: 70%; margin: auto; position: relative;"
+    tabindex="0"
+  >
+    <div
+      class="leaflet-pane leaflet-map-pane"
+      style="left: 0px; top: 0px;"
+    >
+      <div
+        class="leaflet-pane leaflet-tile-pane"
+      >
+        <div
+          class="leaflet-layer "
+          style="z-index: 1;"
+        >
+          <div
+            class="leaflet-tile-container leaflet-zoom-animated"
+            style="z-index: 6; left: 0px; top: 0px;"
+          >
+            <img
+              alt=""
+              class="leaflet-tile"
+              src="https://raw.githubusercontent.com/witcher3map/witcher3map-maps/master/white_orchard/4/5/3.png"
+              style="width: 256px; height: 256px; left: -28px; top: -107px;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="leaflet-pane leaflet-overlay-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-shadow-pane"
+      >
+        <img
+          alt=""
+          class="leaflet-marker-shadow leaflet-zoom-hide"
+          src="marker-shadow.png"
+          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: -1308px; top: -1131px;"
+        />
+        <img
+          alt=""
+          class="leaflet-marker-shadow leaflet-zoom-hide"
+          src="marker-shadow.png"
+          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: 1252px; top: 917px;"
+        />
+        <img
+          alt=""
+          class="leaflet-marker-shadow leaflet-zoom-hide"
+          src="marker-shadow.png"
+          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: 740px; top: -1131px;"
+        />
+      </div>
+      <div
+        class="leaflet-pane leaflet-marker-pane"
+      >
+        <img
+          alt="Marker"
+          class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+          role="button"
+          src="marker-icon.png"
+          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: -1308px; top: -1131px; z-index: -1131;"
+          tabindex="0"
+          title="Petrópolis"
+        />
+        <img
+          alt="Marker"
+          class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+          role="button"
+          src="marker-icon.png"
+          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: 1252px; top: 917px; z-index: 917;"
+          tabindex="0"
+          title="Nova Iguaçu"
+        />
+        <img
+          alt="Marker"
+          class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
+          role="button"
+          src="marker-icon.png"
+          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: 740px; top: -1131px; z-index: -1131;"
+          tabindex="0"
+          title="Rio de Janeiro"
+        />
+      </div>
+      <div
+        class="leaflet-pane leaflet-tooltip-pane"
+      />
+      <div
+        class="leaflet-pane leaflet-popup-pane"
+      />
+    </div>
+    <div
+      class="leaflet-control-container"
+    >
+      <div
+        class="leaflet-top leaflet-left"
+      >
+        <div
+          class="leaflet-control-zoom leaflet-bar leaflet-control"
+        >
+          <a
+            aria-disabled="false"
+            aria-label="Zoom in"
+            class="leaflet-control-zoom-in"
+            href="#"
+            role="button"
+            title="Zoom in"
+          >
+            <span
+              aria-hidden="true"
+            >
+              +
+            </span>
+          </a>
+          <a
+            aria-disabled="true"
+            aria-label="Zoom out"
+            class="leaflet-control-zoom-out leaflet-disabled"
+            href="#"
+            role="button"
+            title="Zoom out"
+          >
+            <span
+              aria-hidden="true"
+            >
+              −
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="leaflet-top leaflet-right"
+      />
+      <div
+        class="leaflet-bottom leaflet-left"
+      />
+      <div
+        class="leaflet-bottom leaflet-right"
+      >
+        <div
+          class="leaflet-control-attribution leaflet-control"
+        >
+          <a
+            href="https://leafletjs.com"
+            title="A JavaScript library for interactive maps"
+          >
+            Leaflet
+          </a>
+           
+          <span
+            aria-hidden="true"
+          >
+            |
+          </span>
+           © 
+          <a
+            href="https://www.openstreetmap.org/copyright"
+          >
+            OpenStreetMap
+          </a>
+           contributors
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
