@@ -2,12 +2,9 @@
 
 exports[`Map:  should render with the marker in correct place 1`] = `
 <div>
-  <h1>
-    Maplant
-  </h1>
   <div
     class="leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-    style="height: 100%; width: 70%; margin: auto; position: relative;"
+    style="height: 100%; width: 106em; margin: auto; position: relative;"
     tabindex="0"
   >
     <div
@@ -44,19 +41,13 @@ exports[`Map:  should render with the marker in correct place 1`] = `
           alt=""
           class="leaflet-marker-shadow leaflet-zoom-hide"
           src="marker-shadow.png"
-          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: -1308px; top: -1131px;"
+          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: 303px; top: -181px;"
         />
         <img
           alt=""
           class="leaflet-marker-shadow leaflet-zoom-hide"
           src="marker-shadow.png"
-          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: 1252px; top: 917px;"
-        />
-        <img
-          alt=""
-          class="leaflet-marker-shadow leaflet-zoom-hide"
-          src="marker-shadow.png"
-          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: 740px; top: -1131px;"
+          style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; left: 235px; top: -39px;"
         />
       </div>
       <div
@@ -67,27 +58,18 @@ exports[`Map:  should render with the marker in correct place 1`] = `
           class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
           role="button"
           src="marker-icon.png"
-          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: -1308px; top: -1131px; z-index: -1131;"
+          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: 303px; top: -181px; z-index: -181;"
           tabindex="0"
-          title="Petrópolis"
+          title="Arenaria"
         />
         <img
           alt="Marker"
           class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
           role="button"
           src="marker-icon.png"
-          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: 1252px; top: 917px; z-index: 917;"
+          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: 235px; top: -39px; z-index: -39;"
           tabindex="0"
-          title="Nova Iguaçu"
-        />
-        <img
-          alt="Marker"
-          class="leaflet-marker-icon leaflet-zoom-hide leaflet-interactive"
-          role="button"
-          src="marker-icon.png"
-          style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; left: 740px; top: -1131px; z-index: -1131;"
-          tabindex="0"
-          title="Rio de Janeiro"
+          title="PlantaLegal"
         />
       </div>
       <div
@@ -121,9 +103,9 @@ exports[`Map:  should render with the marker in correct place 1`] = `
             </span>
           </a>
           <a
-            aria-disabled="true"
+            aria-disabled="false"
             aria-label="Zoom out"
-            class="leaflet-control-zoom-out leaflet-disabled"
+            class="leaflet-control-zoom-out"
             href="#"
             role="button"
             title="Zoom out"
@@ -162,9 +144,9 @@ exports[`Map:  should render with the marker in correct place 1`] = `
           </span>
            © 
           <a
-            href="https://www.openstreetmap.org/copyright"
+            href="https://github.com/witcher3map/witcher3map-maps"
           >
-            OpenStreetMap
+            Witcher3map
           </a>
            contributors
         </div>

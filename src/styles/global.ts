@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
     --highlight: #e20e8d;
     --background: #030518;
     --white: #eeeeee;
+    --gray: #929292;
 
     --container: 100rem;
 
@@ -29,18 +30,21 @@ const GlobalStyles = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   }
 
-  p,
-  a {
-    font-size: 2rem;
-    line-height: var(--medium);
-  }
-
-  a {
-    color: var(--highlight);
-  }
-
   .leaflet-control-attribution {
     display: none;
+  }
+
+  .leaflet-popup {
+    bottom: 20px !important;
+    left: -38px !important;
+  }
+
+  .leaflet-popup-tip-container {
+    left: 15%;
+  }
+
+  .leaflet-container, a {
+    color: var(--gray) !important;
   }
 `
 

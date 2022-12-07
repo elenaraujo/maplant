@@ -1,43 +1,70 @@
 import { gql } from 'graphql-request'
 
-export const GET_PAGES = gql`
-  query GetPages {
-    pages {
-      id
-      heading
+export const GET_PLANT = gql`
+  query GetPlant {
+    plants {
+      plantName
       slug
-      body {
-        html
+      description
+      value
+      image {
+        url
+      }
+      note
+      merchants {
+        text
+        image {
+          url
+        }
+      }
+      alchemicalItems {
+        name
+        image {
+          url
+        }
       }
     }
   }
 `
 
-export const GET_PAGE_BY_SLUG = gql`
-  query GetPageBySlug($slug: String!) {
-    page(where: { slug: $slug }) {
-      id
+export const GET_PLANT_BY_SLUG = gql`
+  query GetPlantBySlug($slug: String!) {
+    plant(where: { slug: $slug }) {
+      plantName
       slug
-      heading
-      body {
-        html
+      description
+      value
+      image {
+        url
+      }
+      note
+      merchants {
+        text
+        image {
+          url
+        }
+      }
+      alchemicalItems {
+        name
+        image {
+          url
+        }
       }
     }
   }
 `
 
 export const GET_MARKERS = gql`
-  query getPlant {
+  query GetMarkers {
     markers {
-      name
-      slug
-      description {
-        html
-      }
-      gallery {
-        id
-      }
       coordinates
+      plant {
+        plantName
+        slug
+        image {
+          url
+        }
+      }
     }
   }
 `

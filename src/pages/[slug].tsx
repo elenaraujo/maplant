@@ -1,13 +1,17 @@
 import { Loading } from '@nextui-org/react'
-import { GetPageBySlugQuery, GetPagesQuery } from 'graphql/generated/graphql'
-import { GET_PAGES, GET_PAGE_BY_SLUG } from 'graphql/queries'
+import { GetPlantBySlugQuery, GetPlantQuery } from 'graphql/generated/graphql'
+import { GET_PLANT, GET_PLANT_BY_SLUG } from 'graphql/queries'
 import client from 'graphql/graph'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import PageTemplate, { PageTemplateProps } from 'templates/Pages'
-import { LoadingWrapper } from 'templates/Pages/styles'
+import PlantPageTemplate, { PlantPageTemplateProps } from 'templates/PlantPages'
+import { LoadingWrapper } from 'templates/PlantPages/styles'
 
-export default function PlantPage({ heading, body }: PageTemplateProps) {
+export default function PlantPage({
+  plantName,
+  description,
+  imageURL
+}: PlantPageTemplateProps) {
   const router = useRouter()
 
   if (router.isFallback) {
@@ -17,13 +21,19 @@ export default function PlantPage({ heading, body }: PageTemplateProps) {
       </LoadingWrapper>
     )
   }
-  return <PageTemplate heading={heading} body={body} />
+  return (
+    <PlantPageTemplate
+      plantName={plantName}
+      description={description}
+      imageURL={imageURL}
+    />
+  )
 }
 
 export async function getStaticPaths() {
-  const { pages } = await client.request<GetPagesQuery>(GET_PAGES)
+  const { plants } = await client.request<GetPlantQuery>(GET_PLANT)
 
-  const paths = pages.map(({ slug }) => ({
+  const paths = plants.map(({ slug }) => ({
     params: { slug }
   }))
 
@@ -31,15 +41,22 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { page } = await client.request<GetPageBySlugQuery>(GET_PAGE_BY_SLUG, {
-    slug: `${params?.slug}`
-  })
+  const { plant } = await client.request<GetPlantBySlugQuery>(
+    GET_PLANT_BY_SLUG,
+    {
+      slug: `${params?.slug}`
+    }
+  )
 
-  if (!page) return { notFound: true }
+  if (!plant) return { notFound: true }
+
+  const { plantName, description, image } = plant
+
   return {
     props: {
-      heading: page.heading,
-      body: page.body.html
+      plantName,
+      description,
+      imageURL: image.url
     }
   }
 }

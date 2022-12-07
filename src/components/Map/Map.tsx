@@ -1,4 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+import PopupContent from 'components/PopupContent/PopupContent'
+import { MapProps } from 'pages/map'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
+import { getSvgFromSlug } from 'utils/functions'
 
 const MyContainer = () => {
   const map = useMap()
@@ -6,7 +10,7 @@ const MyContainer = () => {
   return null
 }
 
-const Map = ({ places }: MapProps) => {
+const Map = ({ markers }: MapProps) => {
   return (
     <>
       <MapContainer
@@ -29,12 +33,20 @@ const Map = ({ places }: MapProps) => {
           attribution='&copy; <a href="https://github.com/witcher3map/witcher3map-maps">Witcher3map</a> contributors'
           url="https://raw.githubusercontent.com/witcher3map/witcher3map-maps/master/white_orchard/{z}/{x}/{y}.png"
         />
-        {places?.map(({ id, name, description, location }) => {
-          const { y, x } = location
+        {markers?.map(({ coordinates, plant }: MarkerProps) => {
+          const { lat, lng } = coordinates
+          const { plantName, slug, image } = plant
 
           return (
-            <Marker key={`place-${id}`} position={[y, x]} title={name}>
-              <Popup>{description}</Popup>
+            <Marker
+              key={`place-${slug}`}
+              position={[lat, lng]}
+              title={plantName}
+              icon={getSvgFromSlug(slug)}
+            >
+              <Popup maxWidth={250} minWidth={230} closeButton={false}>
+                <PopupContent image={image} plantName={plantName} slug={slug} />
+              </Popup>
             </Marker>
           )
         })}
@@ -43,19 +55,13 @@ const Map = ({ places }: MapProps) => {
   )
 }
 
-export type Place = {
-  id: string
-  name: string
-  slug: string
-  description: string
-  location: {
-    y: number
-    x: number
+export type MarkerProps = {
+  coordinates: { lat: number; lng: number }
+  plant: {
+    image: { url: string }
+    plantName: string
+    slug: string
   }
-}
-
-export type MapProps = {
-  places?: Place[]
 }
 
 export default Map

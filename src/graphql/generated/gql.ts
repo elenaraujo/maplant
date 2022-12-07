@@ -13,18 +13,33 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel-plugin for production.
  */
 const documents = {
-    "\n  query GetPages {\n    pages {\n      id\n      heading\n      slug\n      body {\n        html\n      }\n    }\n  }\n": types.GetPagesDocument,
-    "\n  query GetPageBySlug($slug: String!) {\n    page(where: { slug: $slug }) {\n      id\n      slug\n      heading\n      body {\n        html\n      }\n    }\n  }\n": types.GetPageBySlugDocument,
+    "\n  mutation createMarker($lat: String!, $lng: String!, $plantSlug: String!) {\n    createMarker(\n      data: {\n        coordinates: { lat: $lat, lng: $lng }\n        plant: { connect: { slug: $plantSlug } }\n      }\n    ) {\n      id\n    }\n  }\n": types.CreateMarkerDocument,
+    "\n  mutation publishMarker($markerId: ID!) {\n    publishMarker(where: { id: $markerId }, to: PUBLISHED) {\n      id\n    }\n  }\n": types.PublishMarkerDocument,
+    "\n  query GetPlant {\n    plants {\n      plantName\n      slug\n      description\n      value\n      image {\n        url\n      }\n      note\n      merchants {\n        text\n        image {\n          url\n        }\n      }\n      alchemicalItems {\n        name\n        image {\n          url\n        }\n      }\n    }\n  }\n": types.GetPlantDocument,
+    "\n  query GetPlantBySlug($slug: String!) {\n    plant(where: { slug: $slug }) {\n      plantName\n      slug\n      description\n      value\n      image {\n        url\n      }\n      note\n      merchants {\n        text\n        image {\n          url\n        }\n      }\n      alchemicalItems {\n        name\n        image {\n          url\n        }\n      }\n    }\n  }\n": types.GetPlantBySlugDocument,
+    "\n  query GetMarkers {\n    markers {\n      coordinates\n      plant {\n        plantName\n        slug\n        image {\n          url\n        }\n      }\n    }\n  }\n": types.GetMarkersDocument,
 };
 
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n  query GetPages {\n    pages {\n      id\n      heading\n      slug\n      body {\n        html\n      }\n    }\n  }\n"): (typeof documents)["\n  query GetPages {\n    pages {\n      id\n      heading\n      slug\n      body {\n        html\n      }\n    }\n  }\n"];
+export function graphql(source: "\n  mutation createMarker($lat: String!, $lng: String!, $plantSlug: String!) {\n    createMarker(\n      data: {\n        coordinates: { lat: $lat, lng: $lng }\n        plant: { connect: { slug: $plantSlug } }\n      }\n    ) {\n      id\n    }\n  }\n"): (typeof documents)["\n  mutation createMarker($lat: String!, $lng: String!, $plantSlug: String!) {\n    createMarker(\n      data: {\n        coordinates: { lat: $lat, lng: $lng }\n        plant: { connect: { slug: $plantSlug } }\n      }\n    ) {\n      id\n    }\n  }\n"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n  query GetPageBySlug($slug: String!) {\n    page(where: { slug: $slug }) {\n      id\n      slug\n      heading\n      body {\n        html\n      }\n    }\n  }\n"): (typeof documents)["\n  query GetPageBySlug($slug: String!) {\n    page(where: { slug: $slug }) {\n      id\n      slug\n      heading\n      body {\n        html\n      }\n    }\n  }\n"];
+export function graphql(source: "\n  mutation publishMarker($markerId: ID!) {\n    publishMarker(where: { id: $markerId }, to: PUBLISHED) {\n      id\n    }\n  }\n"): (typeof documents)["\n  mutation publishMarker($markerId: ID!) {\n    publishMarker(where: { id: $markerId }, to: PUBLISHED) {\n      id\n    }\n  }\n"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query GetPlant {\n    plants {\n      plantName\n      slug\n      description\n      value\n      image {\n        url\n      }\n      note\n      merchants {\n        text\n        image {\n          url\n        }\n      }\n      alchemicalItems {\n        name\n        image {\n          url\n        }\n      }\n    }\n  }\n"): (typeof documents)["\n  query GetPlant {\n    plants {\n      plantName\n      slug\n      description\n      value\n      image {\n        url\n      }\n      note\n      merchants {\n        text\n        image {\n          url\n        }\n      }\n      alchemicalItems {\n        name\n        image {\n          url\n        }\n      }\n    }\n  }\n"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query GetPlantBySlug($slug: String!) {\n    plant(where: { slug: $slug }) {\n      plantName\n      slug\n      description\n      value\n      image {\n        url\n      }\n      note\n      merchants {\n        text\n        image {\n          url\n        }\n      }\n      alchemicalItems {\n        name\n        image {\n          url\n        }\n      }\n    }\n  }\n"): (typeof documents)["\n  query GetPlantBySlug($slug: String!) {\n    plant(where: { slug: $slug }) {\n      plantName\n      slug\n      description\n      value\n      image {\n        url\n      }\n      note\n      merchants {\n        text\n        image {\n          url\n        }\n      }\n      alchemicalItems {\n        name\n        image {\n          url\n        }\n      }\n    }\n  }\n"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query GetMarkers {\n    markers {\n      coordinates\n      plant {\n        plantName\n        slug\n        image {\n          url\n        }\n      }\n    }\n  }\n"): (typeof documents)["\n  query GetMarkers {\n    markers {\n      coordinates\n      plant {\n        plantName\n        slug\n        image {\n          url\n        }\n      }\n    }\n  }\n"];
 
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
