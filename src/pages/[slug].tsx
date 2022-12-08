@@ -1,7 +1,7 @@
 import { Loading } from '@nextui-org/react'
 import { GetPlantBySlugQuery, GetPlantQuery } from 'graphql/generated/graphql'
 import { GET_PLANT, GET_PLANT_BY_SLUG } from 'graphql/queries'
-import client from 'graphql/graph'
+import client from 'graphql/graphClient'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import PlantPageTemplate, { PlantPageTemplateProps } from 'templates/PlantPages'

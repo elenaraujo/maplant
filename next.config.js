@@ -14,5 +14,9 @@ module.exports = withPWA({
   },
   images: {
     domains: ['media.graphassets.com']
+  },
+  env: {
+    GRAPHQL_TOKEN: process.env.GRAPHQL_TOKEN,
+    GRAPHQL_HOST: process.env.GRAPHQL_HOST
   }
 })

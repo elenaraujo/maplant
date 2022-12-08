@@ -20,3 +20,7 @@ export const PUBLISH_MARKER = gql`
     }
   }
 `
+
+export const DELETE_MARKER = gql``
+
+export const UPDATE_MARKER = gql``

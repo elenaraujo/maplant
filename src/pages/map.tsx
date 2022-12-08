@@ -1,8 +1,8 @@
-import client from 'graphql/graph'
-import { GetStaticProps } from 'next'
 import dynamic from 'next/dynamic'
 import { GET_MARKERS } from 'graphql/queries'
 import { GetMarkersQuery } from 'graphql/generated/graphql'
+import client from 'graphql/graphClient'
+import { GetStaticProps } from 'next'
 
 const Map = dynamic(() => import('components/Map/Map'), { ssr: false })
 

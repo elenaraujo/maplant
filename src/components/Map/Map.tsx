@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+import PlantForm from 'components/PlantForm/PlantForm'
 import PopupContent from 'components/PopupContent/PopupContent'
 import { MapProps } from 'pages/map'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
@@ -10,9 +10,12 @@ const MyContainer = () => {
   return null
 }
 
+// Implementar verificação de pattern ao fazer cadastro de location
+// para evitar valores diferentes de number positivo ou negativo
 const Map = ({ markers }: MapProps) => {
   return (
     <>
+      <PlantForm />
       <MapContainer
         center={[-70, -65]}
         zoom={4}
@@ -39,7 +42,7 @@ const Map = ({ markers }: MapProps) => {
 
           return (
             <Marker
-              key={`place-${slug}`}
+              key={`marker-${slug}-${lat}-${lng}`}
               position={[lat, lng]}
               title={plantName}
               icon={getSvgFromSlug(slug)}
