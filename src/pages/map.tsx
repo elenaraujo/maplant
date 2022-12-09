@@ -27,6 +27,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export type MapProps = {
   markers: [
     {
+      id: string
       coordinates: { lat: number; lng: number }
       plant: {
         image: { url: string }

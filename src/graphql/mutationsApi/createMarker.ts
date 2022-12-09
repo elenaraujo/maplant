@@ -17,10 +17,11 @@ const createMarker = async (lat: string, lng: string, plantSlug: string) => {
 
   if (data?.createMarker?.id) {
     try {
+      console.log('Trying to publish marker...')
       await client.request(PUBLISH_MARKER, {
         markerId: data.createMarker.id
       })
-      console.log('Successfully published marker')
+      console.log('Marker successfully published')
       // TODO: Caso o novo marcador cadastrado continue demorando muito a aparecer
       // adicionar um contador de 10 segundos na tela antes de tentar fazer o reload
       window.location.reload()

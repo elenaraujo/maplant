@@ -1,4 +1,5 @@
-import PlantForm from 'components/PlantForm/PlantForm'
+import { Divider } from '@nextui-org/react'
+import PlantForm from 'components/Forms/PlantForm'
 import PopupContent from 'components/PopupContent/PopupContent'
 import { MapProps } from 'pages/map'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
@@ -16,6 +17,7 @@ const Map = ({ markers }: MapProps) => {
   return (
     <>
       <PlantForm />
+      <Divider />
       <MapContainer
         center={[-70, -65]}
         zoom={4}
@@ -36,7 +38,7 @@ const Map = ({ markers }: MapProps) => {
           attribution='&copy; <a href="https://github.com/witcher3map/witcher3map-maps">Witcher3map</a> contributors'
           url="https://raw.githubusercontent.com/witcher3map/witcher3map-maps/master/white_orchard/{z}/{x}/{y}.png"
         />
-        {markers?.map(({ coordinates, plant }: MarkerProps) => {
+        {markers?.map(({ id, coordinates, plant }: MarkerProps) => {
           const { lat, lng } = coordinates
           const { plantName, slug, image } = plant
 
@@ -48,17 +50,33 @@ const Map = ({ markers }: MapProps) => {
               icon={getSvgFromSlug(slug)}
             >
               <Popup maxWidth={250} minWidth={230} closeButton={false}>
-                <PopupContent image={image} plantName={plantName} slug={slug} />
+                <PopupContent
+                  markerId={id}
+                  image={image}
+                  plantName={plantName}
+                  slug={slug}
+                />
               </Popup>
             </Marker>
           )
         })}
+
+        <Marker
+          key="temp-marker"
+          position={[-72.6595884687862, -80.37597656250001]}
+          title="Teste"
+        >
+          <Popup maxWidth={250} minWidth={230} closeButton={false}>
+            <span>Marker temporário</span>
+          </Popup>
+        </Marker>
       </MapContainer>
     </>
   )
 }
 
 export type MarkerProps = {
+  id: string
   coordinates: { lat: number; lng: number }
   plant: {
     image: { url: string }

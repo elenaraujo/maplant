@@ -1,3 +1,4 @@
+import { Button } from '@nextui-org/react'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -24,6 +25,8 @@ export const ActionsWrapper = styled.div`
 export const IconWrapper = styled.a`
   color: var(--gray);
   width: 15px;
+  height: 15px;
+  display: flex;
 `
 
 export const TxtWrapper = styled.div`
@@ -43,3 +46,12 @@ export const PlantLink = styled.a`
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
 `
+
+export const StyledButton = {
+  width: 'fit-content',
+  minWidth: 'fit-content',
+  height: 15,
+  padding: 0,
+  backgroundColor: 'transparent',
+  borderRadius: 0
+}

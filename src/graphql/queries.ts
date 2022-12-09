@@ -60,6 +60,7 @@ export const GET_PLANT_BY_SLUG = gql`
 export const GET_MARKERS = gql`
   query GetMarkers {
     markers(first: 100) {
+      id
       coordinates
       plant {
         plantName
