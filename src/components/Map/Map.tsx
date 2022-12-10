@@ -1,7 +1,7 @@
 import { Divider } from '@nextui-org/react'
 import PlantForm from 'components/Forms/PlantForm'
 import PopupContent from 'components/PopupContent/PopupContent'
-import { MapProps } from 'pages/map'
+import { MapProps } from 'pages/white-orchard'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import { getSvgFromSlug } from 'utils/functions'
 

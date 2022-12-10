@@ -61,6 +61,7 @@ export type AlchemicalItem = Node & {
 
 
 export type AlchemicalItemCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -80,11 +81,13 @@ export type AlchemicalItemHistoryArgs = {
 
 
 export type AlchemicalItemImageArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
 export type AlchemicalItemPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -93,6 +96,7 @@ export type AlchemicalItemScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   skip?: InputMaybe<Scalars['Int']>;
@@ -101,6 +105,7 @@ export type AlchemicalItemScheduledInArgs = {
 
 
 export type AlchemicalItemUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -526,6 +531,7 @@ export type AssetCreatedAtArgs = {
 
 /** Asset system model */
 export type AssetCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -551,6 +557,7 @@ export type AssetImageAlchemicalItemArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   orderBy?: InputMaybe<AlchemicalItemOrderByInput>;
@@ -564,6 +571,7 @@ export type AssetImageMerchantArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   orderBy?: InputMaybe<MerchantOrderByInput>;
@@ -577,6 +585,7 @@ export type AssetImagePlantArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   orderBy?: InputMaybe<PlantOrderByInput>;
@@ -600,6 +609,7 @@ export type AssetPublishedAtArgs = {
 
 /** Asset system model */
 export type AssetPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -609,6 +619,7 @@ export type AssetScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   skip?: InputMaybe<Scalars['Int']>;
@@ -624,6 +635,7 @@ export type AssetUpdatedAtArgs = {
 
 /** Asset system model */
 export type AssetUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1365,6 +1377,7 @@ export type Marker = Node & {
 
 
 export type MarkerCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1384,11 +1397,13 @@ export type MarkerHistoryArgs = {
 
 
 export type MarkerPlantArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
 export type MarkerPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1397,6 +1412,7 @@ export type MarkerScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   skip?: InputMaybe<Scalars['Int']>;
@@ -1405,6 +1421,7 @@ export type MarkerScheduledInArgs = {
 
 
 export type MarkerUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1761,6 +1778,7 @@ export type Merchant = Node & {
 
 
 export type MerchantCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1780,11 +1798,13 @@ export type MerchantHistoryArgs = {
 
 
 export type MerchantImageArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
 export type MerchantPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -1793,6 +1813,7 @@ export type MerchantScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   skip?: InputMaybe<Scalars['Int']>;
@@ -1801,6 +1822,7 @@ export type MerchantScheduledInArgs = {
 
 
 export type MerchantUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -2183,8 +2205,6 @@ export type Mutation = {
   createMarker?: Maybe<Marker>;
   /** Create one merchant */
   createMerchant?: Maybe<Merchant>;
-  /** Create one page */
-  createPage?: Maybe<Page>;
   /** Create one plant */
   createPlant?: Maybe<Plant>;
   /** Create one scheduledRelease */
@@ -2222,13 +2242,6 @@ export type Mutation = {
   /** Delete many Merchant documents, return deleted documents */
   deleteManyMerchantsConnection: MerchantConnection;
   /**
-   * Delete many Page documents
-   * @deprecated Please use the new paginated many mutation (deleteManyPagesConnection)
-   */
-  deleteManyPages: BatchPayload;
-  /** Delete many Page documents, return deleted documents */
-  deleteManyPagesConnection: PageConnection;
-  /**
    * Delete many Plant documents
    * @deprecated Please use the new paginated many mutation (deleteManyPlantsConnection)
    */
@@ -2239,8 +2252,6 @@ export type Mutation = {
   deleteMarker?: Maybe<Marker>;
   /** Delete one merchant from _all_ existing stages. Returns deleted document. */
   deleteMerchant?: Maybe<Merchant>;
-  /** Delete one page from _all_ existing stages. Returns deleted document. */
-  deletePage?: Maybe<Page>;
   /** Delete one plant from _all_ existing stages. Returns deleted document. */
   deletePlant?: Maybe<Plant>;
   /** Delete and return scheduled operation */
@@ -2280,13 +2291,6 @@ export type Mutation = {
   /** Publish many Merchant documents */
   publishManyMerchantsConnection: MerchantConnection;
   /**
-   * Publish many Page documents
-   * @deprecated Please use the new paginated many mutation (publishManyPagesConnection)
-   */
-  publishManyPages: BatchPayload;
-  /** Publish many Page documents */
-  publishManyPagesConnection: PageConnection;
-  /**
    * Publish many Plant documents
    * @deprecated Please use the new paginated many mutation (publishManyPlantsConnection)
    */
@@ -2297,8 +2301,6 @@ export type Mutation = {
   publishMarker?: Maybe<Marker>;
   /** Publish one merchant */
   publishMerchant?: Maybe<Merchant>;
-  /** Publish one page */
-  publishPage?: Maybe<Page>;
   /** Publish one plant */
   publishPlant?: Maybe<Plant>;
   /** Schedule to publish one alchemicalItem */
@@ -2309,8 +2311,6 @@ export type Mutation = {
   schedulePublishMarker?: Maybe<Marker>;
   /** Schedule to publish one merchant */
   schedulePublishMerchant?: Maybe<Merchant>;
-  /** Schedule to publish one page */
-  schedulePublishPage?: Maybe<Page>;
   /** Schedule to publish one plant */
   schedulePublishPlant?: Maybe<Plant>;
   /** Unpublish one alchemicalItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -2321,8 +2321,6 @@ export type Mutation = {
   scheduleUnpublishMarker?: Maybe<Marker>;
   /** Unpublish one merchant from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   scheduleUnpublishMerchant?: Maybe<Merchant>;
-  /** Unpublish one page from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-  scheduleUnpublishPage?: Maybe<Page>;
   /** Unpublish one plant from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   scheduleUnpublishPlant?: Maybe<Plant>;
   /** Unpublish one alchemicalItem from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -2358,13 +2356,6 @@ export type Mutation = {
   /** Find many Merchant documents that match criteria in specified stage and unpublish from target stages */
   unpublishManyMerchantsConnection: MerchantConnection;
   /**
-   * Unpublish many Page documents
-   * @deprecated Please use the new paginated many mutation (unpublishManyPagesConnection)
-   */
-  unpublishManyPages: BatchPayload;
-  /** Find many Page documents that match criteria in specified stage and unpublish from target stages */
-  unpublishManyPagesConnection: PageConnection;
-  /**
    * Unpublish many Plant documents
    * @deprecated Please use the new paginated many mutation (unpublishManyPlantsConnection)
    */
@@ -2375,8 +2366,6 @@ export type Mutation = {
   unpublishMarker?: Maybe<Marker>;
   /** Unpublish one merchant from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   unpublishMerchant?: Maybe<Merchant>;
-  /** Unpublish one page from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-  unpublishPage?: Maybe<Page>;
   /** Unpublish one plant from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   unpublishPlant?: Maybe<Plant>;
   /** Update one alchemicalItem */
@@ -2412,13 +2401,6 @@ export type Mutation = {
   /** Update many Merchant documents */
   updateManyMerchantsConnection: MerchantConnection;
   /**
-   * Update many pages
-   * @deprecated Please use the new paginated many mutation (updateManyPagesConnection)
-   */
-  updateManyPages: BatchPayload;
-  /** Update many Page documents */
-  updateManyPagesConnection: PageConnection;
-  /**
    * Update many plants
    * @deprecated Please use the new paginated many mutation (updateManyPlantsConnection)
    */
@@ -2429,8 +2411,6 @@ export type Mutation = {
   updateMarker?: Maybe<Marker>;
   /** Update one merchant */
   updateMerchant?: Maybe<Merchant>;
-  /** Update one page */
-  updatePage?: Maybe<Page>;
   /** Update one plant */
   updatePlant?: Maybe<Plant>;
   /** Update one scheduledRelease */
@@ -2443,8 +2423,6 @@ export type Mutation = {
   upsertMarker?: Maybe<Marker>;
   /** Upsert one merchant */
   upsertMerchant?: Maybe<Merchant>;
-  /** Upsert one page */
-  upsertPage?: Maybe<Page>;
   /** Upsert one plant */
   upsertPlant?: Maybe<Plant>;
 };
@@ -2467,11 +2445,6 @@ export type MutationCreateMarkerArgs = {
 
 export type MutationCreateMerchantArgs = {
   data: MerchantCreateInput;
-};
-
-
-export type MutationCreatePageArgs = {
-  data: PageCreateInput;
 };
 
 
@@ -2555,21 +2528,6 @@ export type MutationDeleteManyMerchantsConnectionArgs = {
 };
 
 
-export type MutationDeleteManyPagesArgs = {
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
-export type MutationDeleteManyPagesConnectionArgs = {
-  after?: InputMaybe<Scalars['ID']>;
-  before?: InputMaybe<Scalars['ID']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
-  skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
 export type MutationDeleteManyPlantsArgs = {
   where?: InputMaybe<PlantManyWhereInput>;
 };
@@ -2592,11 +2550,6 @@ export type MutationDeleteMarkerArgs = {
 
 export type MutationDeleteMerchantArgs = {
   where: MerchantWhereUniqueInput;
-};
-
-
-export type MutationDeletePageArgs = {
-  where: PageWhereUniqueInput;
 };
 
 
@@ -2708,24 +2661,6 @@ export type MutationPublishManyMerchantsConnectionArgs = {
 };
 
 
-export type MutationPublishManyPagesArgs = {
-  to?: Array<Stage>;
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
-export type MutationPublishManyPagesConnectionArgs = {
-  after?: InputMaybe<Scalars['ID']>;
-  before?: InputMaybe<Scalars['ID']>;
-  first?: InputMaybe<Scalars['Int']>;
-  from?: InputMaybe<Stage>;
-  last?: InputMaybe<Scalars['Int']>;
-  skip?: InputMaybe<Scalars['Int']>;
-  to?: Array<Stage>;
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
 export type MutationPublishManyPlantsArgs = {
   to?: Array<Stage>;
   where?: InputMaybe<PlantManyWhereInput>;
@@ -2753,12 +2688,6 @@ export type MutationPublishMarkerArgs = {
 export type MutationPublishMerchantArgs = {
   to?: Array<Stage>;
   where: MerchantWhereUniqueInput;
-};
-
-
-export type MutationPublishPageArgs = {
-  to?: Array<Stage>;
-  where: PageWhereUniqueInput;
 };
 
 
@@ -2803,14 +2732,6 @@ export type MutationSchedulePublishMerchantArgs = {
 };
 
 
-export type MutationSchedulePublishPageArgs = {
-  releaseAt?: InputMaybe<Scalars['DateTime']>;
-  releaseId?: InputMaybe<Scalars['String']>;
-  to?: Array<Stage>;
-  where: PageWhereUniqueInput;
-};
-
-
 export type MutationSchedulePublishPlantArgs = {
   releaseAt?: InputMaybe<Scalars['DateTime']>;
   releaseId?: InputMaybe<Scalars['String']>;
@@ -2850,14 +2771,6 @@ export type MutationScheduleUnpublishMerchantArgs = {
   releaseAt?: InputMaybe<Scalars['DateTime']>;
   releaseId?: InputMaybe<Scalars['String']>;
   where: MerchantWhereUniqueInput;
-};
-
-
-export type MutationScheduleUnpublishPageArgs = {
-  from?: Array<Stage>;
-  releaseAt?: InputMaybe<Scalars['DateTime']>;
-  releaseId?: InputMaybe<Scalars['String']>;
-  where: PageWhereUniqueInput;
 };
 
 
@@ -2959,24 +2872,6 @@ export type MutationUnpublishManyMerchantsConnectionArgs = {
 };
 
 
-export type MutationUnpublishManyPagesArgs = {
-  from?: Array<Stage>;
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
-export type MutationUnpublishManyPagesConnectionArgs = {
-  after?: InputMaybe<Scalars['ID']>;
-  before?: InputMaybe<Scalars['ID']>;
-  first?: InputMaybe<Scalars['Int']>;
-  from?: Array<Stage>;
-  last?: InputMaybe<Scalars['Int']>;
-  skip?: InputMaybe<Scalars['Int']>;
-  stage?: InputMaybe<Stage>;
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
 export type MutationUnpublishManyPlantsArgs = {
   from?: Array<Stage>;
   where?: InputMaybe<PlantManyWhereInput>;
@@ -3004,12 +2899,6 @@ export type MutationUnpublishMarkerArgs = {
 export type MutationUnpublishMerchantArgs = {
   from?: Array<Stage>;
   where: MerchantWhereUniqueInput;
-};
-
-
-export type MutationUnpublishPageArgs = {
-  from?: Array<Stage>;
-  where: PageWhereUniqueInput;
 };
 
 
@@ -3099,23 +2988,6 @@ export type MutationUpdateManyMerchantsConnectionArgs = {
 };
 
 
-export type MutationUpdateManyPagesArgs = {
-  data: PageUpdateManyInput;
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
-export type MutationUpdateManyPagesConnectionArgs = {
-  after?: InputMaybe<Scalars['ID']>;
-  before?: InputMaybe<Scalars['ID']>;
-  data: PageUpdateManyInput;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
-  skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<PageManyWhereInput>;
-};
-
-
 export type MutationUpdateManyPlantsArgs = {
   data: PlantUpdateManyInput;
   where?: InputMaybe<PlantManyWhereInput>;
@@ -3142,12 +3014,6 @@ export type MutationUpdateMarkerArgs = {
 export type MutationUpdateMerchantArgs = {
   data: MerchantUpdateInput;
   where: MerchantWhereUniqueInput;
-};
-
-
-export type MutationUpdatePageArgs = {
-  data: PageUpdateInput;
-  where: PageWhereUniqueInput;
 };
 
 
@@ -3187,12 +3053,6 @@ export type MutationUpsertMerchantArgs = {
 };
 
 
-export type MutationUpsertPageArgs = {
-  upsert: PageUpsertInput;
-  where: PageWhereUniqueInput;
-};
-
-
 export type MutationUpsertPlantArgs = {
   upsert: PlantUpsertInput;
   where: PlantWhereUniqueInput;
@@ -3204,122 +3064,6 @@ export type Node = {
   id: Scalars['ID'];
   /** The Stage of an object */
   stage: Stage;
-};
-
-export type Page = Node & {
-  __typename?: 'Page';
-  body: RichText;
-  /** The time the document was created */
-  createdAt: Scalars['DateTime'];
-  /** User that created this document */
-  createdBy?: Maybe<User>;
-  /** Get the document in other stages */
-  documentInStages: Array<Page>;
-  heading: Scalars['String'];
-  /** List of Page versions */
-  history: Array<Version>;
-  /** The unique identifier */
-  id: Scalars['ID'];
-  /** The time the document was published. Null on documents in draft stage. */
-  publishedAt?: Maybe<Scalars['DateTime']>;
-  /** User that last published this document */
-  publishedBy?: Maybe<User>;
-  scheduledIn: Array<ScheduledOperation>;
-  slug: Scalars['String'];
-  /** System stage field */
-  stage: Stage;
-  /** The time the document was updated */
-  updatedAt: Scalars['DateTime'];
-  /** User that last updated this document */
-  updatedBy?: Maybe<User>;
-};
-
-
-export type PageCreatedByArgs = {
-  locales?: InputMaybe<Array<Locale>>;
-};
-
-
-export type PageDocumentInStagesArgs = {
-  includeCurrent?: Scalars['Boolean'];
-  inheritLocale?: Scalars['Boolean'];
-  stages?: Array<Stage>;
-};
-
-
-export type PageHistoryArgs = {
-  limit?: Scalars['Int'];
-  skip?: Scalars['Int'];
-  stageOverride?: InputMaybe<Stage>;
-};
-
-
-export type PagePublishedByArgs = {
-  locales?: InputMaybe<Array<Locale>>;
-};
-
-
-export type PageScheduledInArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
-  locales?: InputMaybe<Array<Locale>>;
-  skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<ScheduledOperationWhereInput>;
-};
-
-
-export type PageUpdatedByArgs = {
-  locales?: InputMaybe<Array<Locale>>;
-};
-
-export type PageConnectInput = {
-  /** Allow to specify document position in list of connected documents, will default to appending at end of list */
-  position?: InputMaybe<ConnectPositionInput>;
-  /** Document to connect */
-  where: PageWhereUniqueInput;
-};
-
-/** A connection to a list of items. */
-export type PageConnection = {
-  __typename?: 'PageConnection';
-  aggregate: Aggregate;
-  /** A list of edges. */
-  edges: Array<PageEdge>;
-  /** Information to aid in pagination. */
-  pageInfo: PageInfo;
-};
-
-export type PageCreateInput = {
-  body: Scalars['RichTextAST'];
-  createdAt?: InputMaybe<Scalars['DateTime']>;
-  heading: Scalars['String'];
-  slug: Scalars['String'];
-  updatedAt?: InputMaybe<Scalars['DateTime']>;
-};
-
-export type PageCreateManyInlineInput = {
-  /** Connect multiple existing Page documents */
-  connect?: InputMaybe<Array<PageWhereUniqueInput>>;
-  /** Create and connect multiple existing Page documents */
-  create?: InputMaybe<Array<PageCreateInput>>;
-};
-
-export type PageCreateOneInlineInput = {
-  /** Connect one existing Page document */
-  connect?: InputMaybe<PageWhereUniqueInput>;
-  /** Create and connect one Page document */
-  create?: InputMaybe<PageCreateInput>;
-};
-
-/** An edge in a connection. */
-export type PageEdge = {
-  __typename?: 'PageEdge';
-  /** A cursor for use in pagination. */
-  cursor: Scalars['String'];
-  /** The item at the end of the edge. */
-  node: Page;
 };
 
 /** Information about pagination in a connection. */
@@ -3335,364 +3079,6 @@ export type PageInfo = {
   pageSize?: Maybe<Scalars['Int']>;
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']>;
-};
-
-/** Identifies documents */
-export type PageManyWhereInput = {
-  /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<PageWhereInput>>;
-  /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<PageWhereInput>>;
-  /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<PageWhereInput>>;
-  /** Contains search across all appropriate fields. */
-  _search?: InputMaybe<Scalars['String']>;
-  createdAt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than the given value. */
-  createdAt_gt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than or equal the given value. */
-  createdAt_gte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are contained in given list. */
-  createdAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  /** All values less than the given value. */
-  createdAt_lt?: InputMaybe<Scalars['DateTime']>;
-  /** All values less than or equal the given value. */
-  createdAt_lte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not equal to given value. */
-  createdAt_not?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not contained in given list. */
-  createdAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  createdBy?: InputMaybe<UserWhereInput>;
-  documentInStages_every?: InputMaybe<PageWhereStageInput>;
-  documentInStages_none?: InputMaybe<PageWhereStageInput>;
-  documentInStages_some?: InputMaybe<PageWhereStageInput>;
-  heading?: InputMaybe<Scalars['String']>;
-  /** All values containing the given string. */
-  heading_contains?: InputMaybe<Scalars['String']>;
-  /** All values ending with the given string. */
-  heading_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are contained in given list. */
-  heading_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values that are not equal to given value. */
-  heading_not?: InputMaybe<Scalars['String']>;
-  /** All values not containing the given string. */
-  heading_not_contains?: InputMaybe<Scalars['String']>;
-  /** All values not ending with the given string */
-  heading_not_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are not contained in given list. */
-  heading_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values not starting with the given string. */
-  heading_not_starts_with?: InputMaybe<Scalars['String']>;
-  /** All values starting with the given string. */
-  heading_starts_with?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
-  /** All values containing the given string. */
-  id_contains?: InputMaybe<Scalars['ID']>;
-  /** All values ending with the given string. */
-  id_ends_with?: InputMaybe<Scalars['ID']>;
-  /** All values that are contained in given list. */
-  id_in?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
-  /** All values that are not equal to given value. */
-  id_not?: InputMaybe<Scalars['ID']>;
-  /** All values not containing the given string. */
-  id_not_contains?: InputMaybe<Scalars['ID']>;
-  /** All values not ending with the given string */
-  id_not_ends_with?: InputMaybe<Scalars['ID']>;
-  /** All values that are not contained in given list. */
-  id_not_in?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
-  /** All values not starting with the given string. */
-  id_not_starts_with?: InputMaybe<Scalars['ID']>;
-  /** All values starting with the given string. */
-  id_starts_with?: InputMaybe<Scalars['ID']>;
-  publishedAt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than the given value. */
-  publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than or equal the given value. */
-  publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are contained in given list. */
-  publishedAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  /** All values less than the given value. */
-  publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
-  /** All values less than or equal the given value. */
-  publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not equal to given value. */
-  publishedAt_not?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not contained in given list. */
-  publishedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  publishedBy?: InputMaybe<UserWhereInput>;
-  scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
-  scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
-  scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
-  slug?: InputMaybe<Scalars['String']>;
-  /** All values containing the given string. */
-  slug_contains?: InputMaybe<Scalars['String']>;
-  /** All values ending with the given string. */
-  slug_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are contained in given list. */
-  slug_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values that are not equal to given value. */
-  slug_not?: InputMaybe<Scalars['String']>;
-  /** All values not containing the given string. */
-  slug_not_contains?: InputMaybe<Scalars['String']>;
-  /** All values not ending with the given string */
-  slug_not_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are not contained in given list. */
-  slug_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values not starting with the given string. */
-  slug_not_starts_with?: InputMaybe<Scalars['String']>;
-  /** All values starting with the given string. */
-  slug_starts_with?: InputMaybe<Scalars['String']>;
-  updatedAt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than the given value. */
-  updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than or equal the given value. */
-  updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are contained in given list. */
-  updatedAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  /** All values less than the given value. */
-  updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
-  /** All values less than or equal the given value. */
-  updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not equal to given value. */
-  updatedAt_not?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not contained in given list. */
-  updatedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  updatedBy?: InputMaybe<UserWhereInput>;
-};
-
-export enum PageOrderByInput {
-  CreatedAtAsc = 'createdAt_ASC',
-  CreatedAtDesc = 'createdAt_DESC',
-  HeadingAsc = 'heading_ASC',
-  HeadingDesc = 'heading_DESC',
-  IdAsc = 'id_ASC',
-  IdDesc = 'id_DESC',
-  PublishedAtAsc = 'publishedAt_ASC',
-  PublishedAtDesc = 'publishedAt_DESC',
-  SlugAsc = 'slug_ASC',
-  SlugDesc = 'slug_DESC',
-  UpdatedAtAsc = 'updatedAt_ASC',
-  UpdatedAtDesc = 'updatedAt_DESC'
-}
-
-export type PageUpdateInput = {
-  body?: InputMaybe<Scalars['RichTextAST']>;
-  heading?: InputMaybe<Scalars['String']>;
-  slug?: InputMaybe<Scalars['String']>;
-};
-
-export type PageUpdateManyInlineInput = {
-  /** Connect multiple existing Page documents */
-  connect?: InputMaybe<Array<PageConnectInput>>;
-  /** Create and connect multiple Page documents */
-  create?: InputMaybe<Array<PageCreateInput>>;
-  /** Delete multiple Page documents */
-  delete?: InputMaybe<Array<PageWhereUniqueInput>>;
-  /** Disconnect multiple Page documents */
-  disconnect?: InputMaybe<Array<PageWhereUniqueInput>>;
-  /** Override currently-connected documents with multiple existing Page documents */
-  set?: InputMaybe<Array<PageWhereUniqueInput>>;
-  /** Update multiple Page documents */
-  update?: InputMaybe<Array<PageUpdateWithNestedWhereUniqueInput>>;
-  /** Upsert multiple Page documents */
-  upsert?: InputMaybe<Array<PageUpsertWithNestedWhereUniqueInput>>;
-};
-
-export type PageUpdateManyInput = {
-  body?: InputMaybe<Scalars['RichTextAST']>;
-  heading?: InputMaybe<Scalars['String']>;
-};
-
-export type PageUpdateManyWithNestedWhereInput = {
-  /** Update many input */
-  data: PageUpdateManyInput;
-  /** Document search */
-  where: PageWhereInput;
-};
-
-export type PageUpdateOneInlineInput = {
-  /** Connect existing Page document */
-  connect?: InputMaybe<PageWhereUniqueInput>;
-  /** Create and connect one Page document */
-  create?: InputMaybe<PageCreateInput>;
-  /** Delete currently connected Page document */
-  delete?: InputMaybe<Scalars['Boolean']>;
-  /** Disconnect currently connected Page document */
-  disconnect?: InputMaybe<Scalars['Boolean']>;
-  /** Update single Page document */
-  update?: InputMaybe<PageUpdateWithNestedWhereUniqueInput>;
-  /** Upsert single Page document */
-  upsert?: InputMaybe<PageUpsertWithNestedWhereUniqueInput>;
-};
-
-export type PageUpdateWithNestedWhereUniqueInput = {
-  /** Document to update */
-  data: PageUpdateInput;
-  /** Unique document search */
-  where: PageWhereUniqueInput;
-};
-
-export type PageUpsertInput = {
-  /** Create document if it didn't exist */
-  create: PageCreateInput;
-  /** Update document if it exists */
-  update: PageUpdateInput;
-};
-
-export type PageUpsertWithNestedWhereUniqueInput = {
-  /** Upsert data */
-  data: PageUpsertInput;
-  /** Unique document search */
-  where: PageWhereUniqueInput;
-};
-
-/** This contains a set of filters that can be used to compare values internally */
-export type PageWhereComparatorInput = {
-  /** This field can be used to request to check if the entry is outdated by internal comparison */
-  outdated_to?: InputMaybe<Scalars['Boolean']>;
-};
-
-/** Identifies documents */
-export type PageWhereInput = {
-  /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<PageWhereInput>>;
-  /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<PageWhereInput>>;
-  /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<PageWhereInput>>;
-  /** Contains search across all appropriate fields. */
-  _search?: InputMaybe<Scalars['String']>;
-  createdAt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than the given value. */
-  createdAt_gt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than or equal the given value. */
-  createdAt_gte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are contained in given list. */
-  createdAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  /** All values less than the given value. */
-  createdAt_lt?: InputMaybe<Scalars['DateTime']>;
-  /** All values less than or equal the given value. */
-  createdAt_lte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not equal to given value. */
-  createdAt_not?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not contained in given list. */
-  createdAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  createdBy?: InputMaybe<UserWhereInput>;
-  documentInStages_every?: InputMaybe<PageWhereStageInput>;
-  documentInStages_none?: InputMaybe<PageWhereStageInput>;
-  documentInStages_some?: InputMaybe<PageWhereStageInput>;
-  heading?: InputMaybe<Scalars['String']>;
-  /** All values containing the given string. */
-  heading_contains?: InputMaybe<Scalars['String']>;
-  /** All values ending with the given string. */
-  heading_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are contained in given list. */
-  heading_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values that are not equal to given value. */
-  heading_not?: InputMaybe<Scalars['String']>;
-  /** All values not containing the given string. */
-  heading_not_contains?: InputMaybe<Scalars['String']>;
-  /** All values not ending with the given string */
-  heading_not_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are not contained in given list. */
-  heading_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values not starting with the given string. */
-  heading_not_starts_with?: InputMaybe<Scalars['String']>;
-  /** All values starting with the given string. */
-  heading_starts_with?: InputMaybe<Scalars['String']>;
-  id?: InputMaybe<Scalars['ID']>;
-  /** All values containing the given string. */
-  id_contains?: InputMaybe<Scalars['ID']>;
-  /** All values ending with the given string. */
-  id_ends_with?: InputMaybe<Scalars['ID']>;
-  /** All values that are contained in given list. */
-  id_in?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
-  /** All values that are not equal to given value. */
-  id_not?: InputMaybe<Scalars['ID']>;
-  /** All values not containing the given string. */
-  id_not_contains?: InputMaybe<Scalars['ID']>;
-  /** All values not ending with the given string */
-  id_not_ends_with?: InputMaybe<Scalars['ID']>;
-  /** All values that are not contained in given list. */
-  id_not_in?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
-  /** All values not starting with the given string. */
-  id_not_starts_with?: InputMaybe<Scalars['ID']>;
-  /** All values starting with the given string. */
-  id_starts_with?: InputMaybe<Scalars['ID']>;
-  publishedAt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than the given value. */
-  publishedAt_gt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than or equal the given value. */
-  publishedAt_gte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are contained in given list. */
-  publishedAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  /** All values less than the given value. */
-  publishedAt_lt?: InputMaybe<Scalars['DateTime']>;
-  /** All values less than or equal the given value. */
-  publishedAt_lte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not equal to given value. */
-  publishedAt_not?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not contained in given list. */
-  publishedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  publishedBy?: InputMaybe<UserWhereInput>;
-  scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
-  scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
-  scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
-  slug?: InputMaybe<Scalars['String']>;
-  /** All values containing the given string. */
-  slug_contains?: InputMaybe<Scalars['String']>;
-  /** All values ending with the given string. */
-  slug_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are contained in given list. */
-  slug_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values that are not equal to given value. */
-  slug_not?: InputMaybe<Scalars['String']>;
-  /** All values not containing the given string. */
-  slug_not_contains?: InputMaybe<Scalars['String']>;
-  /** All values not ending with the given string */
-  slug_not_ends_with?: InputMaybe<Scalars['String']>;
-  /** All values that are not contained in given list. */
-  slug_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** All values not starting with the given string. */
-  slug_not_starts_with?: InputMaybe<Scalars['String']>;
-  /** All values starting with the given string. */
-  slug_starts_with?: InputMaybe<Scalars['String']>;
-  updatedAt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than the given value. */
-  updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
-  /** All values greater than or equal the given value. */
-  updatedAt_gte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are contained in given list. */
-  updatedAt_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  /** All values less than the given value. */
-  updatedAt_lt?: InputMaybe<Scalars['DateTime']>;
-  /** All values less than or equal the given value. */
-  updatedAt_lte?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not equal to given value. */
-  updatedAt_not?: InputMaybe<Scalars['DateTime']>;
-  /** All values that are not contained in given list. */
-  updatedAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
-  updatedBy?: InputMaybe<UserWhereInput>;
-};
-
-/** The document in stages filter allows specifying a stage entry to cross compare the same document between different stages */
-export type PageWhereStageInput = {
-  /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<PageWhereStageInput>>;
-  /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<PageWhereStageInput>>;
-  /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<PageWhereStageInput>>;
-  /** This field contains fields which can be set as true or false to specify an internal comparison */
-  compareWithParent?: InputMaybe<PageWhereComparatorInput>;
-  /** Specify the stage to compare with */
-  stage?: InputMaybe<Stage>;
-};
-
-/** References Page record uniquely */
-export type PageWhereUniqueInput = {
-  id?: InputMaybe<Scalars['ID']>;
-  slug?: InputMaybe<Scalars['String']>;
 };
 
 export type Plant = Node & {
@@ -3733,6 +3119,7 @@ export type PlantAlchemicalItemsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   orderBy?: InputMaybe<AlchemicalItemOrderByInput>;
@@ -3742,6 +3129,7 @@ export type PlantAlchemicalItemsArgs = {
 
 
 export type PlantCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -3761,6 +3149,7 @@ export type PlantHistoryArgs = {
 
 
 export type PlantImageArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -3769,6 +3158,7 @@ export type PlantMerchantsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   orderBy?: InputMaybe<MerchantOrderByInput>;
@@ -3778,6 +3168,7 @@ export type PlantMerchantsArgs = {
 
 
 export type PlantPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -3786,6 +3177,7 @@ export type PlantScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   skip?: InputMaybe<Scalars['Int']>;
@@ -3794,6 +3186,7 @@ export type PlantScheduledInArgs = {
 
 
 export type PlantUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -4336,14 +3729,6 @@ export type Query = {
   merchantsConnection: MerchantConnection;
   /** Fetches an object given its ID */
   node?: Maybe<Node>;
-  /** Retrieve a single page */
-  page?: Maybe<Page>;
-  /** Retrieve document version */
-  pageVersion?: Maybe<DocumentVersion>;
-  /** Retrieve multiple pages */
-  pages: Array<Page>;
-  /** Retrieve multiple pages using the Relay connection interface */
-  pagesConnection: PageConnection;
   /** Retrieve a single plant */
   plant?: Maybe<Plant>;
   /** Retrieve document version */
@@ -4529,44 +3914,6 @@ export type QueryNodeArgs = {
   id: Scalars['ID'];
   locales?: Array<Locale>;
   stage?: Stage;
-};
-
-
-export type QueryPageArgs = {
-  locales?: Array<Locale>;
-  stage?: Stage;
-  where: PageWhereUniqueInput;
-};
-
-
-export type QueryPageVersionArgs = {
-  where: VersionWhereInput;
-};
-
-
-export type QueryPagesArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
-  locales?: Array<Locale>;
-  orderBy?: InputMaybe<PageOrderByInput>;
-  skip?: InputMaybe<Scalars['Int']>;
-  stage?: Stage;
-  where?: InputMaybe<PageWhereInput>;
-};
-
-
-export type QueryPagesConnectionArgs = {
-  after?: InputMaybe<Scalars['String']>;
-  before?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
-  locales?: Array<Locale>;
-  orderBy?: InputMaybe<PageOrderByInput>;
-  skip?: InputMaybe<Scalars['Int']>;
-  stage?: Stage;
-  where?: InputMaybe<PageWhereInput>;
 };
 
 
@@ -4776,6 +4123,7 @@ export type ScheduledOperationAffectedDocumentsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   skip?: InputMaybe<Scalars['Int']>;
@@ -4784,6 +4132,7 @@ export type ScheduledOperationAffectedDocumentsArgs = {
 
 /** Scheduled Operation system model */
 export type ScheduledOperationCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -4798,22 +4147,25 @@ export type ScheduledOperationDocumentInStagesArgs = {
 
 /** Scheduled Operation system model */
 export type ScheduledOperationPublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
 /** Scheduled Operation system model */
 export type ScheduledOperationReleaseArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
 /** Scheduled Operation system model */
 export type ScheduledOperationUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
-export type ScheduledOperationAffectedDocument = AlchemicalItem | Asset | Marker | Merchant | Page | Plant;
+export type ScheduledOperationAffectedDocument = AlchemicalItem | Asset | Marker | Merchant | Plant;
 
 export type ScheduledOperationConnectInput = {
   /** Allow to specify document position in list of connected documents, will default to appending at end of list */
@@ -5190,6 +4542,7 @@ export type ScheduledRelease = Node & {
 
 /** Scheduled Release system model */
 export type ScheduledReleaseCreatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -5207,6 +4560,7 @@ export type ScheduledReleaseOperationsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
   orderBy?: InputMaybe<ScheduledOperationOrderByInput>;
@@ -5217,12 +4571,14 @@ export type ScheduledReleaseOperationsArgs = {
 
 /** Scheduled Release system model */
 export type ScheduledReleasePublishedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
 /** Scheduled Release system model */
 export type ScheduledReleaseUpdatedByArgs = {
+  forceParentLocale?: InputMaybe<Scalars['Boolean']>;
   locales?: InputMaybe<Array<Locale>>;
 };
 
@@ -6245,10 +5601,44 @@ export type PublishMarkerMutationVariables = Exact<{
 
 export type PublishMarkerMutation = { __typename?: 'Mutation', publishMarker?: { __typename?: 'Marker', id: string } | null };
 
-export type GetPlantQueryVariables = Exact<{ [key: string]: never; }>;
+export type DeleteMarkerMutationVariables = Exact<{
+  markerId: Scalars['ID'];
+}>;
 
 
-export type GetPlantQuery = { __typename?: 'Query', plants: Array<{ __typename?: 'Plant', plantName: string, slug: string, description: string, value: any, note: Array<string>, image: { __typename?: 'Asset', url: string }, merchants: Array<{ __typename?: 'Merchant', text: string, image: { __typename?: 'Asset', url: string } }>, alchemicalItems: Array<{ __typename?: 'AlchemicalItem', name: string, image: { __typename?: 'Asset', url: string } }> }> };
+export type DeleteMarkerMutation = { __typename?: 'Mutation', deleteMarker?: { __typename?: 'Marker', id: string } | null };
+
+export type DisconnectMarkerMutationVariables = Exact<{
+  markerId: Scalars['ID'];
+}>;
+
+
+export type DisconnectMarkerMutation = { __typename?: 'Mutation', updateMarker?: { __typename?: 'Marker', id: string, plant?: { __typename?: 'Plant', slug: string } | null } | null };
+
+export type ConnectMarkerMutationVariables = Exact<{
+  markerId: Scalars['ID'];
+  newPlantSlug: Scalars['String'];
+}>;
+
+
+export type ConnectMarkerMutation = { __typename?: 'Mutation', updateMarker?: { __typename?: 'Marker', id: string, plant?: { __typename?: 'Plant', slug: string } | null } | null };
+
+export type PublishPlantMutationVariables = Exact<{
+  plantSlug: Scalars['String'];
+}>;
+
+
+export type PublishPlantMutation = { __typename?: 'Mutation', publishPlant?: { __typename?: 'Plant', id: string } | null };
+
+export type GetPlantsCardInfoQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetPlantsCardInfoQuery = { __typename?: 'Query', plants: Array<{ __typename?: 'Plant', plantName: string, slug: string, image: { __typename?: 'Asset', url: string } }> };
+
+export type GetPlantsSlugQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetPlantsSlugQuery = { __typename?: 'Query', plants: Array<{ __typename?: 'Plant', slug: string }> };
 
 export type GetPlantBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
@@ -6260,11 +5650,16 @@ export type GetPlantBySlugQuery = { __typename?: 'Query', plant?: { __typename?:
 export type GetMarkersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMarkersQuery = { __typename?: 'Query', markers: Array<{ __typename?: 'Marker', coordinates: any, plant?: { __typename?: 'Plant', plantName: string, slug: string, image: { __typename?: 'Asset', url: string } } | null }> };
+export type GetMarkersQuery = { __typename?: 'Query', markers: Array<{ __typename?: 'Marker', id: string, coordinates: any, plant?: { __typename?: 'Plant', plantName: string, slug: string, image: { __typename?: 'Asset', url: string } } | null }> };
 
 
 export const CreateMarkerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"createMarker"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"lat"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"lng"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"plantSlug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"createMarker"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"data"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"coordinates"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"lat"},"value":{"kind":"Variable","name":{"kind":"Name","value":"lat"}}},{"kind":"ObjectField","name":{"kind":"Name","value":"lng"},"value":{"kind":"Variable","name":{"kind":"Name","value":"lng"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"plant"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"connect"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"plantSlug"}}}]}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]} as unknown as DocumentNode<CreateMarkerMutation, CreateMarkerMutationVariables>;
 export const PublishMarkerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"publishMarker"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"publishMarker"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"to"},"value":{"kind":"EnumValue","value":"PUBLISHED"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]} as unknown as DocumentNode<PublishMarkerMutation, PublishMarkerMutationVariables>;
-export const GetPlantDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPlant"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plants"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plantName"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"value"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"note"}},{"kind":"Field","name":{"kind":"Name","value":"merchants"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"alchemicalItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPlantQuery, GetPlantQueryVariables>;
+export const DeleteMarkerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"deleteMarker"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"deleteMarker"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]} as unknown as DocumentNode<DeleteMarkerMutation, DeleteMarkerMutationVariables>;
+export const DisconnectMarkerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"disconnectMarker"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"updateMarker"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"data"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"plant"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"disconnect"},"value":{"kind":"BooleanValue","value":true}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"plant"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]} as unknown as DocumentNode<DisconnectMarkerMutation, DisconnectMarkerMutationVariables>;
+export const ConnectMarkerDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"connectMarker"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"newPlantSlug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"updateMarker"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"id"},"value":{"kind":"Variable","name":{"kind":"Name","value":"markerId"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"data"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"plant"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"connect"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"newPlantSlug"}}}]}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"plant"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]} as unknown as DocumentNode<ConnectMarkerMutation, ConnectMarkerMutationVariables>;
+export const PublishPlantDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"publishPlant"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"plantSlug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"publishPlant"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"plantSlug"}}}]}},{"kind":"Argument","name":{"kind":"Name","value":"to"},"value":{"kind":"EnumValue","value":"PUBLISHED"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}}]}}]}}]} as unknown as DocumentNode<PublishPlantMutation, PublishPlantMutationVariables>;
+export const GetPlantsCardInfoDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPlantsCardInfo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plants"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"first"},"value":{"kind":"IntValue","value":"100"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plantName"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]} as unknown as DocumentNode<GetPlantsCardInfoQuery, GetPlantsCardInfoQueryVariables>;
+export const GetPlantsSlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPlantsSlug"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plants"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"first"},"value":{"kind":"IntValue","value":"100"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]} as unknown as DocumentNode<GetPlantsSlugQuery, GetPlantsSlugQueryVariables>;
 export const GetPlantBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetPlantBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plant"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plantName"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"value"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"note"}},{"kind":"Field","name":{"kind":"Name","value":"merchants"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"alchemicalItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetPlantBySlugQuery, GetPlantBySlugQueryVariables>;
-export const GetMarkersDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetMarkers"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"markers"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"coordinates"}},{"kind":"Field","name":{"kind":"Name","value":"plant"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plantName"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetMarkersQuery, GetMarkersQueryVariables>;
+export const GetMarkersDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetMarkers"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"markers"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"first"},"value":{"kind":"IntValue","value":"100"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"coordinates"}},{"kind":"Field","name":{"kind":"Name","value":"plant"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"plantName"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"image"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetMarkersQuery, GetMarkersQueryVariables>;

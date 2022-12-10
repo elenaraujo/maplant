@@ -2,10 +2,12 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --highlight: #e20e8d;
-    --background: #030518;
-    --white: #eeeeee;
+    --background: #FEFAE0;
+    --gold: #FFD28F;
+    --white: #FFFFFF;
     --gray: #929292;
+    --green: #283618;
+    --brown: #2F2105;
 
     --container: 100rem;
 
@@ -22,12 +24,13 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100%;
+    width: 100%;
     background: var(--background);
-    color: var(--white);
+    color: var(--brown);
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: Poppins, sans-serif;
   }
 
   .leaflet-control-attribution {
@@ -43,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
     left: 15%;
   }
 
-  .leaflet-container, a {
+  .leaflet-container {
     color: var(--gray) !important;
   }
 `

@@ -1,5 +1,3 @@
-import { CloseOutline } from '@styled-icons/evaicons-outline'
-import LinkWrapper from 'components/LinkWrapper/LinkWrapper'
 import Image from 'next/image'
 
 import * as S from './styles'
@@ -17,10 +15,6 @@ const PlantPageTemplate = ({
 }: PlantPageTemplateProps) => {
   return (
     <S.Content>
-      <LinkWrapper href="/map">
-        <CloseOutline size={32} />
-      </LinkWrapper>
-
       <S.Heading>{plantName}</S.Heading>
 
       <S.Body>

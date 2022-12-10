@@ -1,28 +1,21 @@
 import { gql } from 'graphql-request'
 
-export const GET_PLANT = gql`
-  query GetPlant {
-    plants {
+export const GET_PLANTS_CARD_INFO = gql`
+  query GetPlantsCardInfo {
+    plants(first: 100) {
       plantName
       slug
-      description
-      value
       image {
         url
       }
-      note
-      merchants {
-        text
-        image {
-          url
-        }
-      }
-      alchemicalItems {
-        name
-        image {
-          url
-        }
-      }
+    }
+  }
+`
+
+export const GET_PLANTS_SLUG = gql`
+  query GetPlantsSlug {
+    plants(first: 100) {
+      slug
     }
   }
 `

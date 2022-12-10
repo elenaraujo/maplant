@@ -1,6 +1,9 @@
 import { Loading } from '@nextui-org/react'
-import { GetPlantBySlugQuery, GetPlantQuery } from 'graphql/generated/graphql'
-import { GET_PLANT, GET_PLANT_BY_SLUG } from 'graphql/queries'
+import {
+  GetPlantBySlugQuery,
+  GetPlantsSlugQuery
+} from 'graphql/generated/graphql'
+import { GET_PLANTS_SLUG, GET_PLANT_BY_SLUG } from 'graphql/queries'
 import client from 'graphql/graphClient'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
@@ -31,7 +34,7 @@ export default function PlantPage({
 }
 
 export async function getStaticPaths() {
-  const { plants } = await client.request<GetPlantQuery>(GET_PLANT)
+  const { plants } = await client.request<GetPlantsSlugQuery>(GET_PLANTS_SLUG)
 
   const paths = plants.map(({ slug }) => ({
     params: { slug }
@@ -60,8 +63,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 }
-
-// getStaticPaths -> serve para gerar as urls em build time /about, /trip, /petropolis
-// getStaticProps -> serve para buscar dados da página (props) - build time - estático
-// getServerSideProps -> serve para buscar dados da página (props) - runtime - toda requisição (bundle fica no server)
-// deprecado: getInitialProps -> serve para buscar dados da página (props) - runtime - toda requisição (bundle também vem para o client) - hydrate

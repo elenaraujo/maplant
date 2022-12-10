@@ -1,4 +1,3 @@
-import { Button } from '@nextui-org/react'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`

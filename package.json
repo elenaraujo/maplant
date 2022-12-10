@@ -14,6 +14,7 @@
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.10",
     "@styled-icons/bootstrap": "^10.46.0",
+    "@styled-icons/boxicons-regular": "^10.46.0",
     "@styled-icons/evaicons-outline": "^10.46.0",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
