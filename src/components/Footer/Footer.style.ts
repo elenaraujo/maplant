@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  gap: 50px;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   min-height: 421px;
@@ -14,6 +13,13 @@ export const FooterContainer = styled.div`
     padding-top: 20px;
     align-items: center;
   }
+`
+
+export const WidthLimiter = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  max-width: 1280px;
 `
 
 export const GeraltsContainer = styled.div`

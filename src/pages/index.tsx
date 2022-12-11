@@ -1,11 +1,13 @@
-import Home from 'components/Home/Home'
+import dynamic from 'next/dynamic'
 import { GetPlantsCardInfoQuery } from 'graphql/generated/graphql'
 import client from 'graphql/graphClient'
 import { GET_PLANTS_CARD_INFO } from 'graphql/queries'
 import { GetStaticProps } from 'next'
 
+const NoSSRHome = dynamic(() => import('components/Home/Home'), { ssr: false })
+
 const HomePage = ({ plants }: PlantsPropTypes) => {
-  return <Home plants={plants} />
+  return <NoSSRHome plants={plants} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {
