@@ -6,7 +6,7 @@ const BadgeWeb = ({ children }: { children: JSX.Element }) => (
     disableOutline
     content="Coming soon"
     color="warning"
-    css={{
+    style={{
       top: -6,
       right: 9,
       fontSize: 10,

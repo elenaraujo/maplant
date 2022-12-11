@@ -42,7 +42,7 @@ const PopupContent = ({
           setIsModalSuccessOpen(false)
           window.location.reload()
         }}
-        css={{ height: 150 }}
+        style={{ height: 150 }}
       >
         <h1>Success</h1>
         <br />
@@ -59,7 +59,7 @@ const PopupContent = ({
         onClose={() => {
           setIsModalDeleteOpen(false)
         }}
-        css={{ height: 'fit-content' }}
+        style={{ height: 'fit-content' }}
       >
         <h1>Delete marker?</h1>
         <br />

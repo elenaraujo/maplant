@@ -59,7 +59,7 @@ const UpdatePlantForm = ({
               if (res) setIsModalSuccessOpen(true)
             }}
             size="sm"
-            css={{ margin: '20px 0 20px 0' }}
+            style={{ margin: '20px 0 20px 0' }}
             disabled={isLoading}
           >
             {isLoading && (

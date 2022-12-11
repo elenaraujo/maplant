@@ -4,8 +4,10 @@ import Image from 'next/image'
 import * as S from './PlantList.style'
 import { componentCss as css } from './PlantList.style'
 import form from '../../../public/img/form.png'
+import { useRouter } from 'next/router'
 
 const PlantList = ({ plants, windowWidth }: PlantListPropTypes) => {
+  const router = useRouter()
   const c = css(windowWidth)
 
   return (
@@ -29,7 +31,7 @@ const PlantList = ({ plants, windowWidth }: PlantListPropTypes) => {
               return (
                 <Card
                   key={slug}
-                  css={{
+                  style={{
                     width: c.outterCardWidth,
                     height: c.outterCardHeight,
                     backgroundColor: 'rgba(255, 255, 255, 40%)',
@@ -38,16 +40,16 @@ const PlantList = ({ plants, windowWidth }: PlantListPropTypes) => {
                   }}
                 >
                   <Card
-                    onPress={(e) => console.log(e.target)}
+                    onPress={() => router.push(`/${slug}`)}
                     isPressable
-                    css={{
+                    style={{
                       width: c.innerCardwidth,
                       height: 'inherit',
                       left: 5
                     }}
                   >
                     <Card.Body
-                      css={{
+                      style={{
                         display: 'flex',
                         flexDirection: 'row',
                         padding: 5

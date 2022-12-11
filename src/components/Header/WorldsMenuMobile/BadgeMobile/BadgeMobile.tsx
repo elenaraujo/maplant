@@ -5,7 +5,7 @@ const BadgeMobile = ({ children }: { children: string }) => (
     disableOutline
     size="xs"
     variant={'flat'}
-    css={{
+    style={{
       backgroundColor: 'var(--gold)',
       color: 'var(--white)',
       marginLeft: 5
