@@ -7,8 +7,9 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Maplant</title>
+        <title>Maplant | The Wicher 3</title>
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="img/icon.ico" type="image/x-icon"></link>
         <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
