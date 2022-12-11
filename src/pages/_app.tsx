@@ -8,7 +8,6 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Maplant | The Wicher 3</title>
-        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="img/icon.ico" type="image/x-icon"></link>
         <link
           rel="stylesheet"

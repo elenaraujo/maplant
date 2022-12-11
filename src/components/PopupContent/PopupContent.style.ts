@@ -22,7 +22,7 @@ export const ActionsWrapper = styled.div`
 `
 
 export const IconWrapper = styled.a`
-  color: var(--gray);
+  color: var(--gray) !important;
   width: 15px;
   height: 15px;
   display: flex;
@@ -40,7 +40,7 @@ export const PlantName = styled.p`
 `
 
 export const PlantLink = styled.a`
-  color: var(--gray);
+  color: var(--gray) !important;
   font-size: 12px;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;

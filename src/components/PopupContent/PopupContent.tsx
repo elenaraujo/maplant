@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import { Button, Modal } from '@nextui-org/react'
 import { PencilSquare, Trash } from '@styled-icons/bootstrap'
 import UpdatePlantForm from 'components/Forms/ModalUpdatePlantForm'
@@ -58,27 +59,33 @@ const PopupContent = ({
         onClose={() => {
           setIsModalDeleteOpen(false)
         }}
-        css={{ height: 150 }}
+        css={{ height: 'fit-content' }}
       >
         <h1>Delete marker?</h1>
         <br />
-        <p>
+        <p style={{ padding: '0 20px 0 20px' }}>
           Are you sure you want to delete this marker? This action can&apos;t be
           undone.
         </p>
-        <Button flat auto color="error" onPress={() => deleteMarker(markerId)}>
-          Yes, delete it
-        </Button>
-        <Button flat auto onPress={() => setIsModalDeleteOpen(false)}>
-          Cancel
-        </Button>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            margin: '20px 0 20px 0'
+          }}
+        >
+          <Button color="error" onPress={() => deleteMarker(markerId)}>
+            Yes, delete it
+          </Button>
+          <Button onPress={() => setIsModalDeleteOpen(false)}>Cancel</Button>
+        </div>
       </Modal>
 
       <S.Container>
         <S.ActionsWrapper>
           <Button
-            css={{ ...S.StyledButton }}
             onPress={() => setIsModalOpen(true)}
+            style={{ ...S.StyledButton }}
           >
             <S.IconWrapper>
               <PencilSquare />
@@ -86,14 +93,15 @@ const PopupContent = ({
           </Button>
 
           <Button
-            css={{ ...S.StyledButton }}
             onPress={() => setIsModalDeleteOpen(true)}
+            style={{ ...S.StyledButton }}
           >
             <S.IconWrapper>
               <Trash />
             </S.IconWrapper>
           </Button>
         </S.ActionsWrapper>
+
         <S.Wrapper>
           <S.ImgWrapper>
             <Image
@@ -103,6 +111,7 @@ const PopupContent = ({
               height={64}
             />
           </S.ImgWrapper>
+
           <S.TxtWrapper>
             <S.PlantName>{plantName}</S.PlantName>
             <Link href={`/${slug}`} passHref>
