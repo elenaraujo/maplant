@@ -29,6 +29,8 @@ export const GeraltsContainer = styled.div`
 
   @media (max-width: 639px) {
     height: fit-content;
+    display: flex;
+    align-self: end;
   }
 `
 
@@ -43,12 +45,18 @@ export const CreditsContainer = styled.div`
     height: fit-content;
     padding-top: 0;
     font-size: 10px;
+    align-self: center;
+    width: 75%;
   }
 `
 
 export const CreditsP = styled.p`
   color: var(--gold);
   text-align: center;
+
+  @media (max-width: 639px) {
+    font-size: 8px;
+  }
 `
 
 export const CreditsP2 = styled.p`
@@ -57,6 +65,11 @@ export const CreditsP2 = styled.p`
   gap: 7px;
   color: var(--gold);
   text-align: center;
+
+  @media (max-width: 639px) {
+    gap: 3px;
+    font-size: 8px;
+  }
 `
 
 export const aLink = styled.a`
@@ -69,4 +82,10 @@ export const SocialMedia = styled.div`
   justify-content: space-evenly;
   margin-top: 50px;
   margin-bottom: 50px;
+
+  @media (max-width: 639px) {
+    gap: 7px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 `

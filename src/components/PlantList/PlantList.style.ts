@@ -62,14 +62,15 @@ export const NameWrapper = styled.div`
   font-size: 24px;
   font-weight: 500;
 
-  @media (max-width: 639px) {
-    font-size: 12px;
-    margin-left: 10px;
-  }
-
   @media (max-width: 1000px) {
     font-size: 18px;
     margin-left: 10px;
+  }
+
+  @media (max-width: 639px) {
+    font-size: 10px;
+    margin-left: 5px;
+    padding-right: 5px;
   }
 `
 
@@ -77,9 +78,9 @@ export const componentCss = (windowWidth: number) => {
   if (windowWidth < 639) {
     return {
       imgSize: 44,
-      outterCardWidth: 140,
-      innerCardwidth: 130,
-      outterCardHeight: 70
+      outterCardWidth: 130,
+      innerCardwidth: 120,
+      outterCardHeight: 60
     }
   }
 

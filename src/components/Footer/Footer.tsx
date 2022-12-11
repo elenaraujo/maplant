@@ -33,7 +33,7 @@ const Footer = () => {
             />
             . Map assets from{' '}
             <ARef url="https://witcher3map.com/" text="witcher3map" />. Part of
-            the text are taken from{' '}
+            the text and all plants images are taken from{' '}
             <ARef
               url="https://witcher.fandom.com/wiki/Witcher_Wiki"
               text="Witcher Wiki"
