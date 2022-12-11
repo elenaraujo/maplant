@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #FFFFFF;
     --gray: #929292;
     --green: #283618;
+    --soft-green: #606C38;
     --brown: #2F2105;
 
     --container: 100rem;
@@ -25,6 +26,9 @@ const GlobalStyles = createGlobalStyle`
   html, body, #__next {
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
+
     background: var(--background);
     color: var(--brown);
   }

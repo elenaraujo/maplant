@@ -1,15 +1,34 @@
-import React from 'react'
+import Banner from 'components/Banner/Banner'
+import Footer from 'components/Footer/Footer'
+import Header from 'components/Header/Header'
+import PlantList from 'components/PlantList/PlantList'
+import { PlantsPropTypes } from 'pages'
+import React, { useEffect, useState } from 'react'
 import * as S from './Home.style'
 
-const Home = ({ children }: any) => {
-  return <S.HomeWrapper>{children}</S.HomeWrapper>
-}
+const Home = ({ plants }: PlantsPropTypes) => {
+  const [isMobile, setIsMobile] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(1020)
 
-type HomePropTypes = {
-  children: {
-    Header: JSX.Element
-    Banner: JSX.Element
-  }
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 940)
+    setWindowWidth(window.innerWidth)
+  }, [setIsMobile])
+
+  return (
+    <>
+      <Header isMobile={isMobile} />
+      <Banner />
+      <S.InvadeBannerAreaContainer>
+        <S.ContainerWrapper>
+          <S.HomeBodyContainer windowWidth={windowWidth}>
+            <PlantList plants={plants} windowWidth={windowWidth} />
+          </S.HomeBodyContainer>
+        </S.ContainerWrapper>
+        <Footer />
+      </S.InvadeBannerAreaContainer>
+    </>
+  )
 }
 
 export default Home

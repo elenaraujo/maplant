@@ -1,25 +1,11 @@
-import Banner from 'components/Banner/Banner'
-import Header from 'components/Header/Header'
 import Home from 'components/Home/Home'
 import { GetPlantsCardInfoQuery } from 'graphql/generated/graphql'
 import client from 'graphql/graphClient'
 import { GET_PLANTS_CARD_INFO } from 'graphql/queries'
 import { GetStaticProps } from 'next'
-import { useEffect, useState } from 'react'
 
-const HomePage = ({ plants }: HomePropTypes) => {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth >= 940 ? false : true)
-  }, [setIsMobile])
-
-  return (
-    <Home>
-      <Header isMobile={isMobile} />
-      <Banner />
-    </Home>
-  )
+const HomePage = ({ plants }: PlantsPropTypes) => {
+  return <Home plants={plants} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -36,7 +22,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-type HomePropTypes = {
+export type PlantsPropTypes = {
   plants: [
     {
       plantName: string

@@ -10,7 +10,7 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <S.HeaderContainer>
       <S.WidthLimiter>
-        <Link href="/map" passHref>
+        <Link href="/" passHref>
           <S.ImgWrapper>
             <Image
               src={logo}

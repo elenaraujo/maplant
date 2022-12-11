@@ -4,7 +4,7 @@ const BadgeWeb = ({ children }: { children: JSX.Element }) => (
   <Badge
     size="xs"
     disableOutline
-    content="Coming soon!"
+    content="Coming soon"
     color="warning"
     css={{
       top: -6,
@@ -15,7 +15,8 @@ const BadgeWeb = ({ children }: { children: JSX.Element }) => (
       textAlign: 'center',
       lineHeight: '9px',
       width: 51,
-      fontWeight: 300
+      fontWeight: 400,
+      color: 'var(--green)'
     }}
   >
     {children}
