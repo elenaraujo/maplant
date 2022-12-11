@@ -25,15 +25,11 @@ const WorldsMenuMobile = () => {
           onAction={(key) => router.push(`/${key}`)}
         >
           <Dropdown.Item key="white-orchard">White Orchard</Dropdown.Item>
-          <Dropdown.Item
-            key="velen-novigrad"
-            css={{
-              whiteSpace: 'nowrap',
-              fontSize: 14
-            }}
-          >
-            Velen & Novigrad
-            <CustomBadge>Coming soon</CustomBadge>
+          <Dropdown.Item key="velen-novigrad">
+            <div style={{ fontSize: 14, display: 'flex' }}>
+              <p>Velen & Novigrad</p>
+              <CustomBadge>Coming soon</CustomBadge>
+            </div>
           </Dropdown.Item>
           <Dropdown.Item key="skellige">
             Skellige
