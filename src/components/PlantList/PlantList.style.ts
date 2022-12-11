@@ -15,7 +15,7 @@ export const ListGreenBackground = styled.div`
   padding: 0px 30px 100px 30px;
 
   @media (max-width: 639px) {
-    padding: 0px 30px 50px 30px;
+    padding: 0px 5px 50px 5px;
   }
 `
 

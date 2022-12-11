@@ -33,7 +33,10 @@ export const HomeBodyContainer = styled.div`
   }
 
   @media (max-width: 639px) {
-    width: ${({ windowWidth }: WidthLimiterProps) =>
-      (windowWidth * 60) / 100}px;
+    width: 90%;
+  }
+
+  @media (max-width: 339px) {
+    width: 100%;
   }
 `
