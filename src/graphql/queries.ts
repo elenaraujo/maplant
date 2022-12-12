@@ -20,6 +20,15 @@ export const GET_PLANTS_SLUG = gql`
   }
 `
 
+export const GET_PLANTS_SLUG_AND_NAME = gql`
+  query GetPlantsSlugAndName {
+    plants(first: 100) {
+      slug
+      plantName
+    }
+  }
+`
+
 export const GET_PLANT_BY_SLUG = gql`
   query GetPlantBySlug($slug: String!) {
     plant(where: { slug: $slug }) {

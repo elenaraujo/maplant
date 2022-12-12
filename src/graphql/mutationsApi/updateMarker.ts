@@ -8,12 +8,9 @@ import {
 const updateMarker = async (
   markerId: string,
   oldPlantSlug: string,
-  newPlantSlug: string,
-  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
+  newPlantSlug: string
 ) => {
   try {
-    setIsLoading(true)
-
     console.log('Trying to connect marker to the new plant...')
     await client.request(CONNECT_MARKER, { markerId, newPlantSlug })
     console.log('Successfully connected')
@@ -25,12 +22,7 @@ const updateMarker = async (
     console.log('Trying to publish old plant...')
     await client.request(PUBLISH_PLANT, { plantSlug: oldPlantSlug })
     console.log('Successfully published old plant')
-
-    setIsLoading(false)
-
-    return 'ok'
   } catch (error) {
-    setIsLoading(false)
     console.error('Error when trying to update marker')
     console.error(error)
   }

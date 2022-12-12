@@ -21,6 +21,7 @@ const documents = {
     "\n  mutation publishPlant($plantSlug: String!) {\n    publishPlant(where: { slug: $plantSlug }, to: PUBLISHED) {\n      id\n    }\n  }\n": types.PublishPlantDocument,
     "\n  query GetPlantsCardInfo {\n    plants(first: 100) {\n      plantName\n      slug\n      image {\n        url\n      }\n    }\n  }\n": types.GetPlantsCardInfoDocument,
     "\n  query GetPlantsSlug {\n    plants(first: 100) {\n      slug\n    }\n  }\n": types.GetPlantsSlugDocument,
+    "\n  query GetPlantsSlugAndName {\n    plants(first: 100) {\n      slug\n      plantName\n    }\n  }\n": types.GetPlantsSlugAndNameDocument,
     "\n  query GetPlantBySlug($slug: String!) {\n    plant(where: { slug: $slug }) {\n      plantName\n      slug\n      description\n      value\n      image {\n        url\n      }\n      note\n      merchants {\n        text\n        image {\n          url\n        }\n      }\n      alchemicalItems {\n        name\n        image {\n          url\n        }\n      }\n    }\n  }\n": types.GetPlantBySlugDocument,
     "\n  query GetMarkers {\n    markers(first: 100) {\n      id\n      coordinates\n      plant {\n        plantName\n        slug\n        image {\n          url\n        }\n      }\n    }\n  }\n": types.GetMarkersDocument,
 };
@@ -57,6 +58,10 @@ export function graphql(source: "\n  query GetPlantsCardInfo {\n    plants(first
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function graphql(source: "\n  query GetPlantsSlug {\n    plants(first: 100) {\n      slug\n    }\n  }\n"): (typeof documents)["\n  query GetPlantsSlug {\n    plants(first: 100) {\n      slug\n    }\n  }\n"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query GetPlantsSlugAndName {\n    plants(first: 100) {\n      slug\n      plantName\n    }\n  }\n"): (typeof documents)["\n  query GetPlantsSlugAndName {\n    plants(first: 100) {\n      slug\n      plantName\n    }\n  }\n"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

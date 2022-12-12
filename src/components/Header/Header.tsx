@@ -6,10 +6,12 @@ import WorldsMenuMobile from './WorldsMenuMobile/WorldsMenuMobile'
 import WorldsMenuWeb from './WorldsMenuWeb/WorldsMenuWeb'
 import logo from '../../../public/img/logo.png'
 
-const Header = ({ isMobile }: { isMobile: boolean }) => {
+const Header = ({ isMobile = true, hideWorlds = false }: HeaderProps) => {
   return (
-    <S.HeaderContainer>
-      <S.WidthLimiter>
+    <S.HeaderContainer className="header">
+      <S.WidthLimiter
+        style={{ display: `${hideWorlds ? 'contents' : 'flex'}` }}
+      >
         <Link href="/" passHref>
           <S.ImgWrapper>
             <Image
@@ -20,10 +22,12 @@ const Header = ({ isMobile }: { isMobile: boolean }) => {
             />
           </S.ImgWrapper>
         </Link>
-        {isMobile ? <WorldsMenuMobile /> : <WorldsMenuWeb />}
+        {!hideWorlds && (isMobile ? <WorldsMenuMobile /> : <WorldsMenuWeb />)}
       </S.WidthLimiter>
     </S.HeaderContainer>
   )
 }
+
+type HeaderProps = { isMobile?: boolean; hideWorlds?: boolean }
 
 export default Header

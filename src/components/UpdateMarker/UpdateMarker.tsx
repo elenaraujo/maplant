@@ -1,0 +1,50 @@
+import PlantForm from 'components/PlantForm/PlantForm'
+
+const UpdateMarker = ({
+  markerId,
+  modalOpen,
+  setModalOpen,
+  oldPlantSlug,
+  plants
+}: UpdateMarkerProps) => {
+  const OPERATION = 'update'
+
+  const params = {
+    markerId,
+    oldPlantSlug,
+    OPERATION,
+
+    lat: '',
+    lng: '',
+    newPlantSlug: '',
+    setIsLoading: undefined
+  }
+
+  return (
+    <PlantForm
+      title="Update marker"
+      modalOpen={modalOpen}
+      plants={plants}
+      onPressCancel={() => setModalOpen(!modalOpen)}
+      params={params}
+    />
+  )
+}
+
+type UpdateMarkerProps = {
+  markerId: string
+  modalOpen: boolean
+  setModalOpen: React.Dispatch<React.SetStateAction<boolean>>
+  oldPlantSlug: string
+  plants: [
+    {
+      plantName: string
+      slug: string
+      image: {
+        url: string
+      }
+    }
+  ]
+}
+
+export default UpdateMarker

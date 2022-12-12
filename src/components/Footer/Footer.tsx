@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <S.FooterContainer>
+    <S.FooterContainer className="footer">
       <S.WidthLimiter>
         <S.GeraltsContainer>
           <Image

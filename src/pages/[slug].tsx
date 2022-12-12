@@ -10,11 +10,7 @@ import { useRouter } from 'next/router'
 import PlantPageTemplate, { PlantPageTemplateProps } from 'templates/PlantPages'
 import { LoadingWrapper } from 'templates/PlantPages/styles'
 
-export default function PlantPage({
-  plantName,
-  description,
-  imageURL
-}: PlantPageTemplateProps) {
+export default function PlantPage({ plant }: PlantPageTemplateProps) {
   const router = useRouter()
 
   if (router.isFallback) {
@@ -24,13 +20,7 @@ export default function PlantPage({
       </LoadingWrapper>
     )
   }
-  return (
-    <PlantPageTemplate
-      plantName={plantName}
-      description={description}
-      imageURL={imageURL}
-    />
-  )
+  return <PlantPageTemplate plant={plant} />
 }
 
 export async function getStaticPaths() {
@@ -53,13 +43,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   if (!plant) return { notFound: true }
 
-  const { plantName, description, image } = plant
-
   return {
-    props: {
-      plantName,
-      description,
-      imageURL: image.url
-    }
+    props: { plant }
   }
 }

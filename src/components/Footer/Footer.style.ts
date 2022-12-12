@@ -7,6 +7,7 @@ export const FooterContainer = styled.div`
   flex-direction: row;
   min-height: 421px;
   background-color: var(--green);
+  width: 100%;
 
   @media (max-width: 639px) {
     min-height: fit-content;

@@ -1,90 +1,46 @@
 import React, { useState } from 'react'
 
-import { Button, Modal } from '@nextui-org/react'
+import { Button } from '@nextui-org/react'
 import { PencilSquare, Trash } from '@styled-icons/bootstrap'
-import UpdatePlantForm from 'components/Forms/ModalUpdatePlantForm'
 import Image from 'next/image'
 import Link from 'next/link'
 import { removeClassname } from 'utils/functions'
 import * as S from './PopupContent.style'
-import deleteMarker from 'graphql/mutationsApi/deleteMarker'
+
+import UpdateMarker from 'components/UpdateMarker/UpdateMarker'
+import DeleteMarkerModal from './DeleteMarkerModal/DeleteMarkerModal'
 
 const PopupContent = ({
   markerId,
   image,
   plantName,
-  slug
+  slug,
+  plants
 }: PopupContentProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isModalSuccessOpen, setIsModalSuccessOpen] = useState(false)
   const [isModalDeleteOpen, setIsModalDeleteOpen] = useState(false)
+  const [isModalUpdateOpen, setIsModalUpdateOpen] = useState(false)
   removeClassname('leaflet-popup-content')
 
   return (
     <>
-      <Modal
-        open={isModalOpen && !isModalSuccessOpen}
-        closeButton
-        onClose={() => setIsModalOpen(false)}
-      >
-        <UpdatePlantForm
-          markerId={markerId}
-          oldPlantSlug={slug}
-          setIsModalSuccessOpen={setIsModalSuccessOpen}
-        />
-      </Modal>
+      <UpdateMarker
+        markerId={markerId}
+        modalOpen={isModalUpdateOpen}
+        setModalOpen={setIsModalUpdateOpen}
+        oldPlantSlug={slug}
+        plants={plants}
+      />
 
-      <Modal
-        width="500px"
-        open={isModalSuccessOpen}
-        closeButton
-        onClose={() => {
-          setIsModalSuccessOpen(false)
-          window.location.reload()
-        }}
-        style={{ height: 150 }}
-      >
-        <h1>Success</h1>
-        <br />
-        <p>
-          The marker was successfully updated! If your changes doesn&apos;t
-          appear immediately just wait a feel seconds and then refresh the page
-        </p>
-      </Modal>
-
-      <Modal
-        width="500px"
-        open={isModalDeleteOpen}
-        closeButton
-        onClose={() => {
-          setIsModalDeleteOpen(false)
-        }}
-        style={{ height: 'fit-content' }}
-      >
-        <h1>Delete marker?</h1>
-        <br />
-        <p style={{ padding: '0 20px 0 20px' }}>
-          Are you sure you want to delete this marker? This action can&apos;t be
-          undone.
-        </p>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-evenly',
-            margin: '20px 0 20px 0'
-          }}
-        >
-          <Button color="error" onPress={() => deleteMarker(markerId)}>
-            Yes, delete it
-          </Button>
-          <Button onPress={() => setIsModalDeleteOpen(false)}>Cancel</Button>
-        </div>
-      </Modal>
+      <DeleteMarkerModal
+        markerId={markerId}
+        isModalDeleteOpen={isModalDeleteOpen}
+        setIsModalDeleteOpen={setIsModalDeleteOpen}
+      />
 
       <S.Container>
         <S.ActionsWrapper>
           <Button
-            onPress={() => setIsModalOpen(true)}
+            onPress={() => setIsModalUpdateOpen(!isModalUpdateOpen)}
             style={{ ...S.StyledButton }}
           >
             <S.IconWrapper>
@@ -129,6 +85,15 @@ type PopupContentProps = {
   image: { url: string }
   plantName: string
   slug: string
+  plants: [
+    {
+      plantName: string
+      slug: string
+      image: {
+        url: string
+      }
+    }
+  ]
 }
 
 export default PopupContent

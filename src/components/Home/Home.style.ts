@@ -10,10 +10,6 @@ export const InvadeBannerAreaContainer = styled.div`
   position: relative;
   top: -150px;
 
-  @media (max-width: 939px) {
-    top: -150px;
-  }
-
   @media (max-width: 639px) {
     top: -100px;
   }

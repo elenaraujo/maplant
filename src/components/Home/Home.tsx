@@ -3,17 +3,12 @@ import Footer from 'components/Footer/Footer'
 import Header from 'components/Header/Header'
 import PlantList from 'components/PlantList/PlantList'
 import { PlantsPropTypes } from 'pages'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useWidth } from 'utils/hooks'
 import * as S from './Home.style'
 
 const Home = ({ plants }: PlantsPropTypes) => {
-  const [isMobile, setIsMobile] = useState(false)
-  const [windowWidth, setWindowWidth] = useState(1020)
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 940)
-    setWindowWidth(window.innerWidth)
-  }, [setIsMobile])
+  const { isMobile, windowWidth } = useWidth()
 
   return (
     <>

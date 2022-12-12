@@ -7,6 +7,7 @@ const deleteMarker = async (markerId: string) => {
       markerId
     })
     console.log('Marker successfully deleted')
+    window.location.reload()
     // TODO: Revisar necessidade de timeout em prod
     // await setTimeout(() => {
     //   window.location.reload()

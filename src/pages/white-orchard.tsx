@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic'
-import { GET_MARKERS } from 'graphql/queries'
+import { GET_MARKERS, GET_PLANTS_SLUG_AND_NAME } from 'graphql/queries'
 import { GetMarkersQuery } from 'graphql/generated/graphql'
 import client from 'graphql/graphClient'
 import { GetStaticProps } from 'next'
 
 const Map = dynamic(() => import('components/Map/Map'), { ssr: false })
 
-const WhiteOrchardMap = ({ markers }: MapProps) => {
-  return <Map markers={markers} />
+const WhiteOrchardMap = ({ markers, plants }: MapProps) => {
+  return <Map markers={markers} plants={plants} />
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -15,11 +15,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     slug: `${params?.slug}`
   })
 
-  if (!markers) return { notFound: true }
+  const { plants } = await client.request(GET_PLANTS_SLUG_AND_NAME)
+
+  if (!markers || !plants) return { notFound: true }
 
   return {
     props: {
-      markers
+      markers,
+      plants
     }
   }
 }
@@ -33,6 +36,15 @@ export type MapProps = {
         image: { url: string }
         plantName: string
         slug: string
+      }
+    }
+  ]
+  plants: [
+    {
+      plantName: string
+      slug: string
+      image: {
+        url: string
       }
     }
   ]

@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
     --green: #283618;
     --soft-green: #606C38;
     --brown: #2F2105;
+    --red: #DC2626;
+    --dark-blue: #2f384f;
 
     --container: 100rem;
 

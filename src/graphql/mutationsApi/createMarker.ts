@@ -22,9 +22,9 @@ const createMarker = async (lat: string, lng: string, plantSlug: string) => {
         markerId: data.createMarker.id
       })
       console.log('Marker successfully published')
+      window.location.reload()
       // TODO: Caso o novo marcador cadastrado continue demorando muito a aparecer
       // adicionar um contador de 10 segundos na tela antes de tentar fazer o reload
-      window.location.reload()
     } catch (error) {
       console.error('Error when trying to publish the created marker')
       console.error(error)
