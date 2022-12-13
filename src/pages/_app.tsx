@@ -18,7 +18,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#06092B" />
         <meta
           name="description"
-          content="Project for my final paper of graduation in Information Systems"
+          content="Find the herbs you need for your next potion"
         />
       </Head>
       <GlobalStyles />
