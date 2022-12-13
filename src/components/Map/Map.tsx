@@ -34,16 +34,16 @@ const Map = ({ markers, plants }: MapProps) => {
         style={{ height: '100%', width: '100%', margin: 'auto' }}
         // [diagonal inferior direita]
         // [diagonal superior esquerda]
-        maxBounds={[
-          [-150, 45],
-          [0, -180]
-        ]}
+        // maxBounds={[
+        //   [-150, 45],
+        //   [0, -180]
+        // ]}
       >
         <MyLatLngLEAFLET setClickedPlace={setClickedPlace} />
 
         <TileLayer
           tms
-          minZoom={4}
+          // minZoom={4}
           maxZoom={6}
           attribution='&copy; <a href="https://github.com/witcher3map/witcher3map-maps">Witcher3map</a> contributors'
           url="https://raw.githubusercontent.com/witcher3map/witcher3map-maps/master/white_orchard/{z}/{x}/{y}.png"
