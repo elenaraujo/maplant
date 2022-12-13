@@ -1,7 +1,7 @@
 import { GET_MARKERS, GET_PLANTS_SLUG_AND_NAME } from 'graphql/queries'
 import { GetMarkersQuery } from 'graphql/generated/graphql'
 import client from 'graphql/graphClient'
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import dynamic from 'next/dynamic'
 
 const NoSSRMap = dynamic(() => import('components/Map/Map'), { ssr: false })
@@ -10,7 +10,7 @@ const WhiteOrchardMap = ({ markers, plants }: MapProps) => {
   return <NoSSRMap markers={markers} plants={plants} />
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { markers } = await client.request<GetMarkersQuery>(GET_MARKERS, {
     slug: `${params?.slug}`
   })
