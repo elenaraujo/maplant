@@ -1,5 +1,7 @@
-import { Button, Modal } from '@nextui-org/react'
+import { Button, Loading, Modal } from '@nextui-org/react'
 import deleteMarker from 'graphql/mutationsApi/deleteMarker'
+import { useState } from 'react'
+import { useWidth } from 'utils/hooks'
 
 import * as S from './DeleteMarkerModal.style'
 
@@ -14,15 +16,19 @@ const DeleteMarkerModal = ({
   isModalDeleteOpen,
   setIsModalDeleteOpen
 }: DeleteMarkerModalProps) => {
+  const [isLoading, setIsLoading] = useState(false)
+
+  const { isMobile } = useWidth()
+
   return (
     <Modal
-      width="500px"
+      width={isMobile ? '320px' : '500px'}
       open={isModalDeleteOpen}
       closeButton
       onClose={() => {
-        setIsModalDeleteOpen(false)
+        setIsModalDeleteOpen(!isModalDeleteOpen)
       }}
-      style={{ height: 'fit-content' }}
+      style={{ height: 'fit-content', alignItems: 'center' }}
     >
       <h1>Delete marker?</h1>
       <br />
@@ -33,21 +39,36 @@ const DeleteMarkerModal = ({
       <S.ButtonsGroup>
         <Button
           flat
+          size={isMobile ? 'sm' : 'md'}
           style={{
             backgroundColor: 'var(--dark-blue)',
             color: 'var(--white)'
           }}
-          onPress={() => deleteMarker(markerId)}
+          onPress={() => {
+            setIsLoading(!isLoading)
+            deleteMarker(markerId)
+            if (typeof window !== 'undefined') {
+              window.location.reload()
+            }
+          }}
         >
-          Yes, delete it
+          {isLoading && (
+            <Loading type="points" color="currentColor" size="sm" />
+          )}
+          {!isLoading && 'Yes, delete it'}
         </Button>
         <Button
+          disabled={isLoading}
+          size={isMobile ? 'sm' : 'md'}
           bordered
           style={{
             color: 'var(--dark-blue)',
-            borderColor: 'var(--dark-blue)'
+            borderColor: 'var(--dark-blue)',
+            marginLeft: '5px'
           }}
-          onPress={() => setIsModalDeleteOpen(false)}
+          onPress={() => {
+            setIsModalDeleteOpen(!isModalDeleteOpen)
+          }}
         >
           Cancel
         </Button>

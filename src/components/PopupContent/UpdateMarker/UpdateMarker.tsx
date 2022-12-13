@@ -1,3 +1,4 @@
+import { Modal } from '@nextui-org/react'
 import PlantForm from 'components/PlantForm/PlantForm'
 
 const UpdateMarker = ({
@@ -21,13 +22,25 @@ const UpdateMarker = ({
   }
 
   return (
-    <PlantForm
-      title="Update marker"
-      modalOpen={modalOpen}
-      plants={plants}
-      onPressCancel={() => setModalOpen(!modalOpen)}
-      params={params}
-    />
+    <Modal
+      className="bolinha"
+      aria-labelledby="modal-title"
+      open={modalOpen}
+      preventClose
+      closeButton={false}
+      style={{
+        backgroundColor: 'transparent',
+        display: 'inherit'
+      }}
+    >
+      <PlantForm
+        title="Update marker"
+        modalOpen={modalOpen}
+        plants={plants}
+        onPressCancel={() => setModalOpen(!modalOpen)}
+        params={params}
+      />
+    </Modal>
   )
 }
 

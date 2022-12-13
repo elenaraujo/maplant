@@ -1,8 +1,8 @@
-import dynamic from 'next/dynamic'
 import { GetPlantsCardInfoQuery } from 'graphql/generated/graphql'
 import client from 'graphql/graphClient'
 import { GET_PLANTS_CARD_INFO } from 'graphql/queries'
 import { GetStaticProps } from 'next'
+import dynamic from 'next/dynamic'
 
 const NoSSRHome = dynamic(() => import('components/Home/Home'), { ssr: false })
 

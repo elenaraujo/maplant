@@ -6,17 +6,35 @@ export const OptionsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 639px) {
+    margin-top: 15px;
+  }
 `
 
+type isUpdateProps = { isUpdate: boolean }
+
 export const MyModal = styled.div`
-  position: absolute;
+  position: ${({ isUpdate }: isUpdateProps) =>
+    isUpdate ? 'static' : 'absolute'};
   padding-top: 40px;
   width: 300px;
   height: 360px;
   left: 5vw;
   top: 5vh;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 40%);
+  background-color: rgba(255, 255, 255, 70%);
+
+  @media (max-width: 639px) {
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 100%);
+
+    left: ${({ isUpdate }: isUpdateProps) => (isUpdate ? '0' : '28vw')};
+    top: ${({ isUpdate }: isUpdateProps) => (isUpdate ? '0' : '2vh')};
+
+    width: 268px;
+    height: 200px;
+  }
 `
 
 export const MyH2 = styled.h2`
@@ -24,6 +42,10 @@ export const MyH2 = styled.h2`
   font-size: 24px;
   line-height: 25px;
   font-weight: 700;
+
+  @media (max-width: 639px) {
+    font-size: 20px;
+  }
 `
 
 export const P = styled.p`

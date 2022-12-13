@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Dropdown } from '@nextui-org/react'
 import * as S from './PlantForm.style'
 import ButtonsGroup, { ActionsParams } from './ButtonsGroup/ButtonsGroup'
+import { useWidth } from 'utils/hooks'
 
 const PlantForm = ({
   title,
@@ -11,6 +12,7 @@ const PlantForm = ({
   params
 }: PlantsFormProps) => {
   const [newPlantSlug, setNewPlantSlug] = useState('arenaria')
+  const { windowWidth } = useWidth()
 
   params.newPlantSlug = newPlantSlug
 
@@ -23,13 +25,18 @@ const PlantForm = ({
   const message =
     params.OPERATION === 'add'
       ? 'Click where you want to insert a pin on the map'
-      : ''
+      : 'Choose a new plant for this marker'
+
+  const isUpdate = params.OPERATION === 'update'
 
   return (
-    <S.MyModal style={{ display: `${modalOpen ? '' : 'none'}` }}>
+    <S.MyModal
+      isUpdate={isUpdate}
+      style={{ display: `${modalOpen ? '' : 'none'}` }}
+    >
       <S.Div>
         <S.MyH2>{title}</S.MyH2>
-        <S.P>{message}</S.P>
+        <S.P hidden={windowWidth < 639}>{message}</S.P>
       </S.Div>
       <S.OptionsWrapper>
         <Dropdown>
@@ -37,12 +44,13 @@ const PlantForm = ({
             flat
             size="md"
             style={{
-              width: 250,
-              backgroundColor: 'var(--white)',
+              width: windowWidth < 639 ? 200 : 250,
+              backgroundColor:
+                windowWidth < 639 ? 'var(--background)' : 'var(--white)',
               color: 'var(--brown)',
               display: 'flex',
               justifyContent: 'space-between',
-              fontSize: 16
+              fontSize: windowWidth < 639 ? 14 : 16
             }}
           >
             {slugToName.get(newPlantSlug)}

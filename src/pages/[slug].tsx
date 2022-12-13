@@ -3,13 +3,13 @@ import {
   GetPlantBySlugQuery,
   GetPlantsSlugQuery
 } from 'graphql/generated/graphql'
-import dynamic from 'next/dynamic'
 import { GET_PLANTS_SLUG, GET_PLANT_BY_SLUG } from 'graphql/queries'
 import client from 'graphql/graphClient'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import { PlantPageTemplateProps } from 'templates/PlantPages'
 import { LoadingWrapper } from 'templates/PlantPages/styles'
+import dynamic from 'next/dynamic'
 
 const NoSSRPlantPage = dynamic(() => import('templates/PlantPages'), {
   ssr: false
@@ -25,6 +25,7 @@ export default function PlantPage({ plant }: PlantPageTemplateProps) {
       </LoadingWrapper>
     )
   }
+
   return <NoSSRPlantPage plant={plant} />
 }
 

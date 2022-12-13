@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { removeClassname } from 'utils/functions'
 import * as S from './PopupContent.style'
 
-import UpdateMarker from 'components/UpdateMarker/UpdateMarker'
+import UpdateMarker from 'components/PopupContent/UpdateMarker/UpdateMarker'
 import DeleteMarkerModal from './DeleteMarkerModal/DeleteMarkerModal'
 
 const PopupContent = ({

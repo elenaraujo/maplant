@@ -1,8 +1,8 @@
-import dynamic from 'next/dynamic'
 import { GET_MARKERS, GET_PLANTS_SLUG_AND_NAME } from 'graphql/queries'
 import { GetMarkersQuery } from 'graphql/generated/graphql'
 import client from 'graphql/graphClient'
 import { GetStaticProps } from 'next'
+import dynamic from 'next/dynamic'
 
 const NoSSRMap = dynamic(() => import('components/Map/Map'), { ssr: false })
 
