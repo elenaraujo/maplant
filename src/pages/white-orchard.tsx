@@ -4,10 +4,10 @@ import { GetMarkersQuery } from 'graphql/generated/graphql'
 import client from 'graphql/graphClient'
 import { GetStaticProps } from 'next'
 
-const Map = dynamic(() => import('components/Map/Map'), { ssr: false })
+const NoSSRMap = dynamic(() => import('components/Map/Map'), { ssr: false })
 
 const WhiteOrchardMap = ({ markers, plants }: MapProps) => {
-  return <Map markers={markers} plants={plants} />
+  return <NoSSRMap markers={markers} plants={plants} />
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

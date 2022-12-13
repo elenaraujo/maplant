@@ -3,12 +3,17 @@ import {
   GetPlantBySlugQuery,
   GetPlantsSlugQuery
 } from 'graphql/generated/graphql'
+import dynamic from 'next/dynamic'
 import { GET_PLANTS_SLUG, GET_PLANT_BY_SLUG } from 'graphql/queries'
 import client from 'graphql/graphClient'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import PlantPageTemplate, { PlantPageTemplateProps } from 'templates/PlantPages'
+import { PlantPageTemplateProps } from 'templates/PlantPages'
 import { LoadingWrapper } from 'templates/PlantPages/styles'
+
+const NoSSRPlantPage = dynamic(() => import('templates/PlantPages'), {
+  ssr: false
+})
 
 export default function PlantPage({ plant }: PlantPageTemplateProps) {
   const router = useRouter()
@@ -20,7 +25,7 @@ export default function PlantPage({ plant }: PlantPageTemplateProps) {
       </LoadingWrapper>
     )
   }
-  return <PlantPageTemplate plant={plant} />
+  return <NoSSRPlantPage plant={plant} />
 }
 
 export async function getStaticPaths() {

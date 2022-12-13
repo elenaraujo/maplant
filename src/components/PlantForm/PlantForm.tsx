@@ -20,9 +20,17 @@ const PlantForm = ({
     slugToName.set(slug, plantName)
   })
 
+  const message =
+    params.OPERATION === 'add'
+      ? 'Click where you want to insert a pin on the map'
+      : ''
+
   return (
     <S.MyModal style={{ display: `${modalOpen ? '' : 'none'}` }}>
-      <S.MyH2>{title}</S.MyH2>
+      <S.Div>
+        <S.MyH2>{title}</S.MyH2>
+        <S.P>{message}</S.P>
+      </S.Div>
       <S.OptionsWrapper>
         <Dropdown>
           <Dropdown.Button
