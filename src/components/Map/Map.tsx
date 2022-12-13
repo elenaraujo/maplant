@@ -43,7 +43,7 @@ const Map = ({ markers, plants }: MapProps) => {
 
         <TileLayer
           tms
-          // minZoom={4}
+          minZoom={4}
           maxZoom={6}
           attribution='&copy; <a href="https://github.com/witcher3map/witcher3map-maps">Witcher3map</a> contributors'
           url="https://raw.githubusercontent.com/witcher3map/witcher3map-maps/master/white_orchard/{z}/{x}/{y}.png"
