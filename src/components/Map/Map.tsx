@@ -34,10 +34,10 @@ const Map = ({ markers, plants }: MapProps) => {
         style={{ height: '100%', width: '100%', margin: 'auto' }}
         // [diagonal inferior direita]
         // [diagonal superior esquerda]
-        // maxBounds={[
-        //   [-150, 45],
-        //   [0, -180]
-        // ]}
+        maxBounds={[
+          [-150, 45],
+          [0, -180]
+        ]}
       >
         <MyLatLngLEAFLET setClickedPlace={setClickedPlace} />
 
