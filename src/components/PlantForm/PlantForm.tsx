@@ -36,7 +36,7 @@ const PlantForm = ({
     >
       <S.Div>
         <S.MyH2>{title}</S.MyH2>
-        <S.P hidden={windowWidth < 639}>{message}</S.P>
+        <S.P>{message}</S.P>
       </S.Div>
       <S.OptionsWrapper>
         <Dropdown>

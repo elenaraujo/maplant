@@ -33,7 +33,7 @@ export const MyModal = styled.div`
     top: ${({ isUpdate }: isUpdateProps) => (isUpdate ? '0' : '2vh')};
 
     width: 268px;
-    height: 200px;
+    height: 250px;
   }
 `
 
@@ -53,6 +53,10 @@ export const P = styled.p`
   font-size: 14px;
   width: 80%;
   margin-top: 10px;
+
+  @media (max-width: 639px) {
+    font-size: 12px;
+  }
 `
 
 export const Div = styled.div`
