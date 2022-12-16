@@ -1,6 +1,4 @@
-import { Button } from '@nextui-org/react'
 import PlantForm from 'components/PlantForm/PlantForm'
-import { useWidth } from 'utils/hooks'
 import * as S from './AddMarker.style'
 
 const AddMarker = ({
@@ -11,7 +9,7 @@ const AddMarker = ({
 }: AddMarkerProps) => {
   const OPERATION = 'add'
 
-  const { windowWidth } = useWidth()
+  // const { windowWidth } = useWidth()
 
   const params = {
     lat: latLng.lat.toString(),
@@ -26,22 +24,12 @@ const AddMarker = ({
 
   return (
     <S.AddMarkerWrapper>
-      <S.AddButtonContainer hidden={addModalOpen && windowWidth < 639}>
-        <Button
-          size={windowWidth < 639 ? 'sm' : 'lg'}
-          onPress={() => setAddModalOpen(!addModalOpen)}
-          color="error"
-          style={{ backgroundColor: 'var(--red)' }}
-        >
-          {addModalOpen ? 'Close modal' : 'Add marker'}
-        </Button>
-      </S.AddButtonContainer>
-      <S.ModalWrapper className="bolinha">
+      <S.ModalWrapper>
         <PlantForm
           title="Create new marker"
           modalOpen={addModalOpen}
           plants={plants}
-          onPressCancel={() => setAddModalOpen(!addModalOpen)}
+          onPressCancel={() => setAddModalOpen(false)}
           params={params}
         />
       </S.ModalWrapper>

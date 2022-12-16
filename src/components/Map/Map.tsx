@@ -39,7 +39,10 @@ const Map = ({ markers, plants }: MapProps) => {
           [0, -180]
         ]}
       >
-        <MyLatLngLEAFLET setClickedPlace={setClickedPlace} />
+        <MyLatLngLEAFLET
+          setClickedPlace={setClickedPlace}
+          setAddModalOpen={setAddModalOpen}
+        />
 
         <TileLayer
           tms
