@@ -23,6 +23,7 @@ const UpdateMarker = ({
 
   return (
     <Modal
+      className="bolinha"
       aria-labelledby="modal-title"
       open={modalOpen}
       preventClose
@@ -36,7 +37,7 @@ const UpdateMarker = ({
         title="Update marker"
         modalOpen={modalOpen}
         plants={plants}
-        onPressCancel={() => setModalOpen(false)}
+        onPressCancel={() => setModalOpen(!modalOpen)}
         params={params}
       />
     </Modal>
