@@ -44,9 +44,10 @@ const DeleteMarkerModal = ({
             backgroundColor: 'var(--dark-blue)',
             color: 'var(--white)'
           }}
-          onPress={() => {
+          onPress={async () => {
             setIsLoading(!isLoading)
-            deleteMarker(markerId)
+            await deleteMarker(markerId)
+
             if (typeof window !== 'undefined') {
               window.location.reload()
             }

@@ -4,9 +4,9 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = withPWA({
   swcMinify: false,
-  compiler: {
-    removeConsole: true
-  },
+  // compiler: {
+  //   removeConsole: true
+  // },
   pwa: {
     dest: 'public',
     disable: !isProd
